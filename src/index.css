@@ -191,19 +191,51 @@
     padding: 0;
   }
 
-  html, :host {
-    -webkit-text-size-adjust: 100%;
-    tab-size: 4;
-    line-height: 1.5;
-    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
-    font-feature-settings: var(--default-font-feature-settings, normal);
-    font-variation-settings: var(--default-font-variation-settings, normal);
-    -webkit-tap-highlight-color: transparent;
-  }
+  
+/* ===============================
+   Base HTML / Host styling
+   =============================== */
+html, :host {
+  height: 100%;                /* full viewport height */
+  width: 100%;                 /* full viewport width */
+  -webkit-text-size-adjust: 100%;  /* prevent font scaling on iOS */
+  tab-size: 2;                 /* tab character width */
+  line-height: 1.5;            /* base line height */
+  font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  font-feature-settings: var(--default-font-feature-settings, normal);
+  font-variation-settings: var(--default-font-variation-settings, normal);
+  -webkit-tap-highlight-color: transparent; /* remove tap highlight on mobile */
+  box-sizing: border-box;      /* include padding/border in size */
+  overflow-x: hidden;          /* prevent horizontal scroll */
+  margin: 0;                   /* reset default margin */
+  padding: 0;                  /* reset default padding */
+}
 
-  body {
-    line-height: inherit;
-  }
+/* ===============================
+   Body styling
+   =============================== */
+body {
+  min-height: 100%;           /* ensure body fills viewport */
+  width: 100%;
+  line-height: inherit;       /* inherit from html */
+  margin: 0;                  /* remove default margin */
+  padding: 0;
+  box-sizing: inherit;
+  overflow-x: hidden;         /* prevent horizontal scroll */
+  font-family: inherit;       /* inherit font from html */
+  display: flex;              /* optional: allows flex layouts */
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* ===============================
+   Media / content elements
+   =============================== */
+img, video, iframe, svg {
+  max-width: 100%;            /* prevent horizontal overflow */
+  height: auto;
+  display: block;
+}
 
   hr {
     height: 0;
