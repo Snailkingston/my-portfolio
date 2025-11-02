@@ -163,6 +163,8 @@ export function BlogPost({ post, onBack }: BlogPostProps) {
         </motion.article>
 
         {/* Author Bio */}
+
+        <br />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -179,6 +181,7 @@ export function BlogPost({ post, onBack }: BlogPostProps) {
                 Full-Stack Developer & Microsoft Power Platform Specialist. Building production-ready applications
                 that deliver measurable impact. Passionate about mentoring, open source, and sharing knowledge.
               </p>
+              
               <div className="flex space-x-3">
                 <a
                   href="https://github.com/Snailkingston"
@@ -216,11 +219,14 @@ export function BlogPost({ post, onBack }: BlogPostProps) {
           transition={{ delay: 0.6 }}
           className="mt-8 text-center"
         >
+
+          <br />
           <button
             onClick={onBack}
             className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
           >
             <ArrowLeft size={18} />
+            
             <span>Back to All Articles</span>
           </button>
         </motion.div>

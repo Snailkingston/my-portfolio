@@ -289,7 +289,7 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="John Doe"
+                        placeholder="How can i you sir?"
                       />
                     </div>
                     <div>
@@ -352,6 +352,7 @@ export function Contact() {
 
                   <button
                     type="submit"
+                    onClick={() => (window.location.href = 'mailto:patrice_nzogang@outlook.com')}
                     className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all group"
                   >
                     <Send
