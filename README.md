@@ -1,8 +1,7 @@
 
-  # Professional Portfolio Builder
+  # SUFFO NZOGANG PATRICE PORTFOLIO
 
-  This is a code bundle for Professional Portfolio Builder. The original project is available at https://www.figma.com/design/f0S2PqykAB7bYGqcLvPRMq/Professional-Portfolio-Builder.
-
+  This is a code bundle for my Professional Portfolio. 
   ## Running the code
 
   Run `npm i` to install the dependencies.
