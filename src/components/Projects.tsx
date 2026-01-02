@@ -26,6 +26,7 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
       isCaseStudy: true,
       image: 'business workflow',
     },
+    
     {
       title: 'Customer Portal',
       subtitle: 'React + Node.js + Azure',

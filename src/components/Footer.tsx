@@ -143,9 +143,7 @@ export function Footer() {
             © {currentYear} Suffo Nzogang Patrice. All rights reserved.
           </p>
           <p className="text-slate-400 dark:text-slate-500 text-sm flex items-center space-x-1">
-            <span>Built with</span>
-            <Heart size={14} className="fill-red-500 text-red-500" />
-            <span>using React with vite, Tailwind & Motion</span>
+            <span>GOD FEARER</span>
           </p>
         </div>
       </div>

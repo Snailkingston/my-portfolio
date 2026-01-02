@@ -94,17 +94,17 @@ export function Testimonials() {
         >
           <div className="inline-flex items-center space-x-8 px-8 py-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
             <div className="text-center">
-              <div className="text-blue-600 dark:text-blue-400">250+</div>
+              <div className="text-blue-600 dark:text-blue-400">+++</div>
               <div className="text-slate-600 dark:text-slate-300 text-sm">GitHub Stars</div>
             </div>
             <div className="w-px h-12 bg-slate-300 dark:bg-slate-600" />
             <div className="text-center">
-              <div className="text-blue-600 dark:text-blue-400">50+</div>
+              <div className="text-blue-600 dark:text-blue-400">+++</div>
               <div className="text-slate-600 dark:text-slate-300 text-sm">Open Source PRs</div>
             </div>
             <div className="w-px h-12 bg-slate-300 dark:bg-slate-600" />
             <div className="text-center">
-              <div className="text-blue-600 dark:text-blue-400">15+</div>
+              <div className="text-blue-600 dark:text-blue-400">+++</div>
               <div className="text-slate-600 dark:text-slate-300 text-sm">Projects Delivered</div>
             </div>
           </div>

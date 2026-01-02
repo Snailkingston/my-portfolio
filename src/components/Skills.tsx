@@ -11,7 +11,6 @@ export function Skills() {
         { name: 'Bootstrap', level: 90 },
         { name: 'HTML5 / CSS3', level: 95 },
         { name: 'Tailwind CSS', level: 90 },
-        {name : 'SVG', level: 60},
         {name : 'motion libraries', level : 50},
         {name : 'Others', level : 54},
       ],
@@ -22,8 +21,7 @@ export function Skills() {
       skills: [
         {name : 'JavaScript', level : 99},
         {name : 'Python', level : 99},
-        {name : 'Java', level : 70},
-        {name : 'PHP', level : 60},
+        {name : 'Java', level : 50},
         { name: 'Node.js / Express', level: 90 },
         { name: 'REST APIs', level: 95 },
         { name: 'GraphQL', level: 85 },
@@ -37,8 +35,7 @@ export function Skills() {
         {name : 'MySQL', level : 79},
         { name: 'PostgreSQL', level: 90 },
         { name: 'MongoDB', level: 85 },
-        { name: 'Azure SQL', level: 88 },
-        { name: 'Cosmos DB', level: 82 },
+        { name: ' REDIS', level: 88 },
         {name : 'SQLite', level : 99},
         {name : 'SuperBase', level : 59},
         {name : 'Firebase', level : 69},
@@ -59,10 +56,10 @@ export function Skills() {
       category: 'Cloud & DevOps',
       color: 'cyan',
       skills: [
-        { name: 'Azure (App Service, Functions, Storage)', level: 90 },
         { name: 'GitHub Actions', level: 88 },
         { name: 'CI/CD Pipelines', level: 85 },
         { name: 'Docker', level: 80 },
+        {name : 'postman', level: 75}
       ],
     },
     {

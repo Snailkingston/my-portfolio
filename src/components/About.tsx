@@ -49,10 +49,10 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-slate-600 dark:text-slate-300">
-              I'm <strong className="text-slate-900 dark:text-slate-100">Suffo Nzogang Patrice</strong> — a full-stack developer and project manager experienced in building web applications, mobile applications, python desktop applications, and powers app manipulation
+              I'm <strong className="text-slate-900 dark:text-slate-100">Suffo Nzogang Patrice</strong> A full-stack developer and project manager experienced in building web applications, mobile applications, python desktop applications, and powers app manipulation
             </p>
             <p className="text-slate-600 dark:text-slate-300">
-              I combine hands-on development (front-end, back-end, databases, CI and CD ) with Microsoft stack expertise (Power Platform, Office automation, and more ) to deliver production-ready MVPs and scalable features.
+              I combine hands-on development (front-end, back-end, databases, CI and CD ) with Microsoft stacks expertise (Power Platform, Office automation, and more ) to deliver production-ready MVPs and scalable features.
             </p>
             <p className="text-slate-600 dark:text-slate-300">
               I enjoy leading small teams, mentoring contributors, and shipping open-source tools. I prioritize clear product goals, fast feedback cycles, and metrics that prove value.

@@ -289,7 +289,7 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="How can i you sir?"
+                        placeholder="How can i called you sir?"
                       />
                     </div>
                     <div>
