@@ -31,6 +31,15 @@ export function Skills() {
       ],
     },
     {
+      categoryKey: 'skills.categories.mobile',
+      color: 'indigo',
+      skills: [
+        {name : 'React Native', level : 99},
+        {name : 'Flutter', level :75},
+        {name : 'Kotlin', level :65}
+      ],
+    },
+    {
       categoryKey: 'skills.categories.database',
       color: 'purple',
       skills: [

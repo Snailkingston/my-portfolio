@@ -65,6 +65,7 @@
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
+      "mobile" : "Mobile",
       "database": "Database",
       "microsoft": "Microsoft Ecosystem",
       "cloud": "Cloud & DevOps",
