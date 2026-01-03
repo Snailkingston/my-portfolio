@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Calendar, Clock, ArrowRight, Tag, Search, Filter } from 'lucide-react';
 import { BlogPost } from './BlogPost';
+import { useTranslation } from 'react-i18next';
 
 interface BlogPostData {
   id: string;
@@ -146,6 +147,7 @@ React Native is ideal for startups, businesses, or individual developers looking
 ];
 
 export function Blog() {
+  const { t } = useTranslation();
   const [selectedPost, setSelectedPost] = useState<BlogPostData | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -174,10 +176,10 @@ export function Blog() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">Blog</span>
-          <h1 className="mt-2 text-slate-900 dark:text-slate-100">Insights & Tutorials</h1>
+          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">{t('blog.title')}</span>
+          <h1 className="mt-2 text-slate-900 dark:text-slate-100">{t('blog.subtitle')}</h1>
           <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Practical guides, lessons learned, and deep dives into full-stack development, Power Platform, and technical leadership
+            {t('blog.description')}
           </p>
         </motion.div>
 
@@ -193,7 +195,7 @@ export function Blog() {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" size={15} />
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder={t('blog.searchPlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all"
@@ -297,7 +299,7 @@ export function Blog() {
             className="text-center py-12"
           >
             <p className="text-slate-600 dark:text-slate-400 text-lg">
-              No articles found. Try adjusting your search or filters.
+              {t('blog.noResults')}
             </p>
           </motion.div>
         )}
@@ -309,16 +311,16 @@ export function Blog() {
           transition={{ delay: 0.4 }}
           className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white"
         >
-          <h3 className="text-white mb-2">Stay Updated</h3>
-          <p className="text-blue-100 mb-6">Get notified when I publish new articles on full-stack development and Power Platform</p>
+          <h3 className="text-white mb-2">{t('blog.newsletter.title')}</h3>
+          <p className="text-blue-100 mb-6">{t('blog.newsletter.description')}</p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="your.email@example.com"
+              placeholder={t('blog.newsletter.placeholder')}
               className="flex-1 px-4 py-3 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-white"
             />
             <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-all">
-              Subscribe
+              {t('blog.newsletter.subscribe')}
             </button>
           </div>
         </motion.div>

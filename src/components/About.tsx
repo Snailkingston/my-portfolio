@@ -1,27 +1,31 @@
 import { motion } from 'motion/react';
 import { Code2, Briefcase, Users, Award } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export function About() {
+  const { t } = useTranslation();
+  
+  // Highlights with translation keys
   const highlights = [
     {
       icon: Code2,
-      title: 'Full-Stack Expertise',
-      description: 'FrontEnd, BackEnd, Databases, CI/CD and Microsoft Power Platform',
+      titleKey: 'about.highlights.fullStack.title',
+      descriptionKey: 'about.highlights.fullStack.description',
     },
     {
       icon: Briefcase,
-      title: 'Project Leadership',
-      description: 'Leading teams to deliver production MVPs in 6-8 week cycles',
+      titleKey: 'about.highlights.leadership.title',
+      descriptionKey: 'about.highlights.leadership.description',
     },
     {
       icon: Users,
-      title: 'Mentorship',
-      description: 'Coaching junior developers and contributing to open-source',
+      titleKey: 'about.highlights.mentorship.title',
+      descriptionKey: 'about.highlights.mentorship.description',
     },
     {
       icon: Award,
-      title: 'Measurable Results',
-      description: 'Reducing manual work by 40-85% across projects',
+      titleKey: 'about.highlights.results.title',
+      descriptionKey: 'about.highlights.results.description',
     },
   ];
 
@@ -35,8 +39,8 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">About Me</span>
-          <h2 className="mt-2 text-slate-900 dark:text-slate-100">Building Solutions That Matter</h2>
+          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">{t('about.title')}</span>
+          <h2 className="mt-2 text-slate-900 dark:text-slate-100">{t('about.subtitle')}</h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -49,24 +53,28 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-slate-600 dark:text-slate-300">
-              I'm <strong className="text-slate-900 dark:text-slate-100">Suffo Nzogang Patrice</strong> A full-stack developer and project manager experienced in building web applications, mobile applications, python desktop applications, and powers app manipulation
+              <Trans
+                i18nKey="about.intro1"
+                values={{ name: 'Suffo Nzogang Patrice' }}
+                components={{ strong: <strong className="text-slate-900 dark:text-slate-100" /> }}
+              />
             </p>
             <p className="text-slate-600 dark:text-slate-300">
-              I combine hands-on development (front-end, back-end, databases, CI and CD ) with Microsoft stacks expertise (Power Platform, Office automation, and more ) to deliver production-ready MVPs and scalable features.
+              {t('about.intro2')}
             </p>
             <p className="text-slate-600 dark:text-slate-300">
-              I enjoy leading small teams, mentoring contributors, and shipping open-source tools. I prioritize clear product goals, fast feedback cycles, and metrics that prove value.
+              {t('about.intro3')}
             </p>
              <p className="text-slate-600 dark:text-slate-300">
-              I love learning new technologies and participate in open source projects
+              {t('about.intro4')}
             </p>
 
             <div className="flex flex-wrap gap-3 pt-4">
-              <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm">Product-Minded</span>
-              <span className="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm">Agile Leader</span>
-              <span className="px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm">Open Source</span>
-              <span className="px-4 py-2 bg-pink-50 text-pink-700 rounded-full text-sm">Mentor</span>
-              <span className="px-4 py-2 bg-pink-50 text-blue-700 rounded-full text-sm">Business-Minded</span>
+              <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm">{t('about.tags.productMinded')}</span>
+              <span className="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm">{t('about.tags.agileLeader')}</span>
+              <span className="px-4 py-2 bg-purple-50 text-purple-700 rounded-full text-sm">{t('about.tags.openSource')}</span>
+              <span className="px-4 py-2 bg-pink-50 text-pink-700 rounded-full text-sm">{t('about.tags.mentor')}</span>
+              <span className="px-4 py-2 bg-pink-50 text-blue-700 rounded-full text-sm">{t('about.tags.businessMinded')}</span>
             </div>
           </motion.div>
 
@@ -90,8 +98,8 @@ export function About() {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <item.icon className="text-white" size={24} />
                 </div>
-                <h3 className="text-slate-900 dark:text-slate-100 mb-2">{item.title}</h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm">{item.description}</p>
+                <h3 className="text-slate-900 dark:text-slate-100 mb-2">{t(item.titleKey)}</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">{t(item.descriptionKey)}</p>
               </motion.div>
             ))}
           </motion.div>

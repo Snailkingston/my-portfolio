@@ -1,57 +1,62 @@
 import { motion } from 'motion/react';
 import { TrendingUp, Clock, Users, Zap, Target, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Impact() {
+  const { t } = useTranslation();
+  
+  // Metrics with translation keys
   const metrics = [
     {
       icon: TrendingUp,
       value: '40-85%',
-      label: 'Reduction in Manual Processing Time',
-      description: 'Across all projects',
+      labelKey: 'impact.metrics.reduction.label',
+      descriptionKey: 'impact.metrics.reduction.description',
       color: 'blue',
     },
     {
       icon: Target,
       value: '3',
-      label: 'Production MVPs Delivered',
-      description: 'In the last 12 months',
+      labelKey: 'impact.metrics.mvps.label',
+      descriptionKey: 'impact.metrics.mvps.description',
       color: 'indigo',
     },
     {
       icon: Zap,
       value: '18%',
-      label: 'Increase in Payment Throughput',
-      description: 'Customer portal project',
+      labelKey: 'impact.metrics.throughput.label',
+      descriptionKey: 'impact.metrics.throughput.description',
       color: 'purple',
     },
     {
       icon: Users,
       value: '100+',
-      label: 'Users Onboarded',
-      description: 'Power Apps solution in 4 weeks',
+      labelKey: 'impact.metrics.users.label',
+      descriptionKey: 'impact.metrics.users.description',
       color: 'pink',
     },
     {
       icon: Clock,
       value: '97%',
-      label: 'Faster Approval Times',
-      description: 'From 72h to under 2 hours',
+      labelKey: 'impact.metrics.approval.label',
+      descriptionKey: 'impact.metrics.approval.description',
       color: 'cyan',
     },
     {
       icon: Award,
       value: '85%',
-      label: 'Reduction in Errors',
-      description: 'Payroll accuracy improvement',
+      labelKey: 'impact.metrics.errors.label',
+      descriptionKey: 'impact.metrics.errors.description',
       color: 'emerald',
     },
   ];
 
+  // Achievements with translation keys
   const achievements = [
-    'Led cross-functional squad of 4 to launch production MVPs in 6-8 week cycles',
-    'Managed stakeholder onboarding, requirements prioritization, and UAT sign-off',
-    'Mentored 3 junior developers with code reviews and best practices',
-    'Active open-source contributor with multiple merged PRs and issue triage',
+    'impact.achievements.squad',
+    'impact.achievements.stakeholder',
+    'impact.achievements.mentored',
+    'impact.achievements.opensource',
   ];
 
   const getColorClasses = (color: string) => {
@@ -84,10 +89,10 @@ export function Impact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-400 uppercase tracking-wide">Measurable Results</span>
-          <h2 className="mt-2 text-white">Impact & Achievements</h2>
+          <span className="text-blue-400 uppercase tracking-wide">{t('impact.title')}</span>
+          <h2 className="mt-2 text-white">{t('impact.subtitle')}</h2>
           <p className="mt-4 text-blue-100 max-w-2xl mx-auto">
-            Delivering solutions that create real value, backed by data
+            {t('impact.description')}
           </p>
         </motion.div>
 
@@ -108,8 +113,8 @@ export function Impact() {
                   <metric.icon className={colorClasses.text} size={24} />
                 </div>
                 <div className="mb-1">{metric.value}</div>
-                <h3 className="text-white mb-2">{metric.label}</h3>
-                <p className="text-blue-200 text-sm">{metric.description}</p>
+                <h3 className="text-white mb-2">{t(metric.labelKey)}</h3>
+                <p className="text-blue-200 text-sm">{t(metric.descriptionKey)}</p>
               </motion.div>
             );
           })}
@@ -122,9 +127,9 @@ export function Impact() {
           viewport={{ once: true }}
           className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
         >
-          <h3 className="text-white mb-6 text-center">Leadership & Experience Highlights</h3>
+          <h3 className="text-white mb-6 text-center">{t('impact.leadershipTitle')}</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievementKey, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -136,7 +141,7 @@ export function Impact() {
                 <div className="w-6 h-6 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <span className="text-white text-xs">✓</span>
                 </div>
-                <p className="text-blue-100 text-sm">{achievement}</p>
+                <p className="text-blue-100 text-sm">{t(achievementKey)}</p>
               </motion.div>
             ))}
           </div>

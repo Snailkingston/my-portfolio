@@ -1,0 +1,381 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "impact": "Impact",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "contact": "Contact",
+    "resume": "Resume",
+    "toggleTheme": "Toggle theme"
+  },
+  "hero": {
+    "available": "Available for new opportunities",
+    "title": "Full-Stack Developer & Microsoft Power Platform Specialist",
+    "description": "I build production web apps, mobile apps, SaaS, Power Apps, and dashboards powered by Azure — fast, secure, and focused on measurable impact. I turn business problems into working solutions that stakeholders actually use.",
+    "mvpsDelivered": "MVPs Delivered",
+    "errorReduction": "Error Reduction",
+    "usersOnboarded": "Users Onboarded",
+    "viewProjects": "View Projects",
+    "scheduleCall": "Schedule Call",
+    "connect": "Connect:",
+    "codeComment": "Building scalable solutions",
+    "fullStack": "FULL-STACK",
+    "powerPlatforms": "POWER PLATFORMS"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Building Solutions That Matter",
+    "intro1": "I'm <strong>{{name}}</strong> A full-stack developer and project manager experienced in building web applications, mobile applications, python desktop applications, and powers app manipulation",
+    "intro2": "I combine hands-on development (front-end, back-end, databases, CI and CD ) with Microsoft stacks expertise (Power Platform, Office automation, and more ) to deliver production-ready MVPs and scalable features.",
+    "intro3": "I enjoy leading small teams, mentoring contributors, and shipping open-source tools. I prioritize clear product goals, fast feedback cycles, and metrics that prove value.",
+    "intro4": "I love learning new technologies and participate in open source projects",
+    "tags": {
+      "productMinded": "Product-Minded",
+      "agileLeader": "Agile Leader",
+      "openSource": "Open Source",
+      "mentor": "Mentor",
+      "businessMinded": "Business-Minded"
+    },
+    "highlights": {
+      "fullStack": {
+        "title": "Full-Stack Expertise",
+        "description": "FrontEnd, BackEnd, Databases, CI/CD and Microsoft Power Platform"
+      },
+      "leadership": {
+        "title": "Project Leadership",
+        "description": "Leading teams to deliver production MVPs in 6-8 week cycles"
+      },
+      "mentorship": {
+        "title": "Mentorship",
+        "description": "Coaching junior developers and contributing to open-source"
+      },
+      "results": {
+        "title": "Measurable Results",
+        "description": "Reducing manual work by 40-85% across projects"
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Full-Stack Technology Expertise",
+    "description": "A comprehensive skill set spanning frontend, backend, cloud infrastructure, and project leadership",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "microsoft": "Microsoft Ecosystem",
+      "cloud": "Cloud & DevOps",
+      "leadership": "Leadership & Tools"
+    },
+    "additionalTools": "Additional Tools & Technologies"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "subtitle": "Featured Projects",
+    "description": "Production-ready applications delivering measurable business impact",
+    "caseStudy": "Case Study",
+    "viewCaseStudy": "View Full Case Study",
+    "otherProjects": "Other Projects & Open Source",
+    "otherProjectsDesc": "Additional work and contributions",
+    "featured": {
+      "dashboard": {
+        "title": "Operational Dashboard",
+        "subtitle": "Power BI + Azure Data Pipeline",
+        "description": "Built a real-time operations dashboard for enterprise using Power BI and Azure Data Factory. Connected CSV, SQL and API sources, implemented refresh pipelines, and created user roles.",
+        "impact": "40% faster decision time for managers"
+      },
+      "staffTime": {
+        "title": "Staff Time & Approval System",
+        "subtitle": "Power Apps + Azure SQL",
+        "description": "Created a staff-time tracking and approval app with Power Apps, automated approvals with Power Automate, and stored records in Azure SQL. Replaced manual spreadsheets.",
+        "impact": "85% reduction in payroll errors"
+      },
+      "portal": {
+        "title": "Customer Portal",
+        "subtitle": "React + Node.js + Azure",
+        "description": "End-to-end portal for clients to track orders, invoices, and messages. Implemented JWT auth, Azure Blob storage for media, and serverless functions for webhooks.",
+        "impact": "18% increase in on-time payments"
+      }
+    },
+    "other": {
+      "expenseTracker": {
+        "title": "Expense Tracker",
+        "description": "React + Node mini-app with CSV import/export functionality"
+      },
+      "officeAutomation": {
+        "title": "Office Automation Script",
+        "description": "Excel automation using Office Scripts for monthly data consolidation"
+      },
+      "eventRSVP": {
+        "title": "Event RSVP App",
+        "description": "Serverless event management app built in 48-hour hackathon"
+      },
+      "cliTool": {
+        "title": "Open Source CLI Tool",
+        "description": "Command-line utility for developers (250+ stars on GitHub)"
+      }
+    }
+  },
+  "impact": {
+    "title": "Measurable Results",
+    "subtitle": "Impact & Achievements",
+    "description": "Delivering solutions that create real value, backed by data",
+    "metrics": {
+      "reduction": {
+        "value": "40-85%",
+        "label": "Reduction in Manual Processing Time",
+        "description": "Across all projects"
+      },
+      "mvps": {
+        "value": "3",
+        "label": "Production MVPs Delivered",
+        "description": "In the last 12 months"
+      },
+      "throughput": {
+        "value": "18%",
+        "label": "Increase in Payment Throughput",
+        "description": "Customer portal project"
+      },
+      "users": {
+        "value": "100+",
+        "label": "Users Onboarded",
+        "description": "Power Apps solution in 4 weeks"
+      },
+      "approval": {
+        "value": "97%",
+        "label": "Faster Approval Times",
+        "description": "From 72h to under 2 hours"
+      },
+      "errors": {
+        "value": "85%",
+        "label": "Reduction in Errors",
+        "description": "Payroll accuracy improvement"
+      }
+    },
+    "leadershipTitle": "Leadership & Experience Highlights",
+    "achievements": {
+      "squad": "Led cross-functional squad of 4 to launch production MVPs in 6-8 week cycles",
+      "stakeholder": "Managed stakeholder onboarding, requirements prioritization, and UAT sign-off",
+      "mentored": "Mentored 3 junior developers with code reviews and best practices",
+      "opensource": "Active open-source contributor with multiple merged PRs and issue triage"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What People Say",
+    "description": "Feedback from colleagues, managers, and clients I've worked with",
+    "items": {
+      "joseph": {
+        "quote": "Suffo delivered our operational dashboard in under 3 weeks and trained our managers — outstanding work and exceptional communication throughout.",
+        "author": "Joseph Kobe",
+        "role": "Operations Manager",
+        "company": "CEO ICES Academy"
+      },
+      "sarah": {
+        "quote": "Great communicator who shipped the MVP quickly and handled feedback professionally. The Power Apps solution transformed our workflow.",
+        "author": "Sarah Johnson",
+        "role": "HR Director",
+        "company": "Enterprise Solutions Inc"
+      },
+      "ndongmo": {
+        "quote": "Suffo's technical expertise combined with project management skills made our Azure migration smooth and successful. Highly recommend!",
+        "author": "Ndongmo Laur",
+        "role": "CTO",
+        "company": "CloudFirst Ventures"
+      }
+    },
+    "socialProof": {
+      "githubStars": "GitHub Stars",
+      "prs": "Open Source PRs",
+      "projectsDelivered": "Projects Delivered"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights & Tutorials",
+    "description": "Practical guides, lessons learned, and deep dives into full-stack development, Power Platform, and technical leadership",
+    "searchPlaceholder": "Search articles...",
+    "noResults": "No articles found. Try adjusting your search or filters.",
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get notified when I publish new articles on full-stack development and Power Platform",
+      "placeholder": "your.email@example.com",
+      "subscribe": "Subscribe"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's Work Together",
+    "description": "Open to full-time roles, contract work, and technical consulting. Let's discuss how I can help your team deliver impactful solutions.",
+    "contactMethods": "Contact Methods",
+    "quickInfo": "Quick Info",
+    "availableRemote": "Available for remote work",
+    "languages": "English, French",
+    "availableOpportunities": "Available for new opportunities",
+    "sendMessage": "Send a Message",
+    "messageSent": "Message Sent!",
+    "messageSentDesc": "Thank you for reaching out. I'll get back to you soon.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "How can i called you sir?",
+      "email": "Email Address",
+      "emailPlaceholder": "Gmail, outllook, Icloud and more...",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project Inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message",
+      "error": "Something went wrong. Please try again later.",
+      "networkError": "Network error. Please try again later."
+    },
+    "methods": {
+      "email": {
+        "label": "Email",
+        "value": "SUFFO NZOGANG PATRICE"
+      },
+      "calendar": {
+        "label": "Schedule a Call",
+        "value": "Book via Calendly"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "View Projects"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Connect"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "Message me let's work"
+      },
+      "phone": {
+        "label": "Direct Call",
+        "value": "Make a call let's work"
+      }
+    },
+    "reachOut": "Reach Out For:",
+    "reachOutItems": {
+      "fulltime": {
+        "title": "Full-Time Roles",
+        "description": "Looking for a full-stack engineer who can lead teams, deliver MVPs, and drive measurable results using React, Azure, and Power Platform."
+      },
+      "contract": {
+        "title": "Contract Projects",
+        "description": "Need a pragmatic developer to ship production features, dashboards, or Power Apps solutions that cut manual work and improve efficiency."
+      },
+      "opensource": {
+        "title": "Open Source Collaboration",
+        "description": "Open to contributing to OSS projects, mentoring new contributors, and building tools that help the developer community."
+      }
+    }
+  },
+  "footer": {
+    "description": "Full-Stack Developer (Mobile and Web) & Microsoft Power Platform Specialist. Building production-ready solutions that deliver measurable impact.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "availableRemote": "Available for remote work",
+    "languages": "English, French",
+    "copyright": "© {{year}} Suffo Nzogang Patrice. All rights reserved.",
+    "godFearer": "GOD FEARER"
+  },
+  "caseStudy": {
+    "badge": "Featured Case Study",
+    "title": "Staff Time & Approval System",
+    "subtitle": "Power Apps + Power Automate + Azure SQL",
+    "role": "Role",
+    "roleValue": "Lead Developer & Product Manager",
+    "timeline": "Timeline",
+    "timelineValue": "6 weeks (MVP)",
+    "teamSize": "Team Size",
+    "teamSizeValue": "4 members",
+    "problem": "The Problem",
+    "problemDesc": "The company relied on spreadsheets and email threads for time reporting and leave approvals. This manual process caused significant challenges:",
+    "problemItems": {
+      "errors": "Data entry errors leading to payroll discrepancies",
+      "delays": "Manual chasing of approvals causing delays (average 72 hours)",
+      "audit": "No audit trail or accountability for changes",
+      "fragmented": "Fragmented data across multiple spreadsheets"
+    },
+    "goal": "Project Goal",
+    "goalDesc": "Replace spreadsheets with a single, unified app for staff to submit time and leave requests, managers to approve efficiently, and payroll to export validated records. The primary objectives were to reduce approval latency and eliminate data errors.",
+    "solution": "Solution Architecture",
+    "solutionItems": {
+      "powerApps": {
+        "title": "Power Apps Canvas",
+        "description": "Mobile + desktop form submission for time entries, leave requests, and attachment uploads"
+      },
+      "powerAutomate": {
+        "title": "Power Automate Flows",
+        "description": "Automated approval routing by manager, reminders, and complete audit trail"
+      },
+      "azureSql": {
+        "title": "Azure SQL Database",
+        "description": "Single source of truth for all time and approval records"
+      },
+      "blobStorage": {
+        "title": "Azure Blob Storage",
+        "description": "Secure storage for attachments and supporting documents"
+      },
+      "azureAd": {
+        "title": "Azure AD Integration",
+        "description": "Role-based access control using Azure AD groups"
+      },
+      "payroll": {
+        "title": "Payroll Export",
+        "description": "Nightly automated flow to CSV format for payroll system"
+      }
+    },
+    "responsibilities": "My Responsibilities",
+    "responsibilityItems": {
+      "product": "Product definition and requirements gathering",
+      "database": "Database schema design and optimization",
+      "ui": "Power Apps UI/UX design and development",
+      "workflow": "Power Automate workflow configuration",
+      "azure": "Azure infrastructure setup and configuration",
+      "training": "User training and rollout management",
+      "stakeholder": "Stakeholder communication and demos",
+      "support": "Post-launch support and iteration"
+    },
+    "impact": "Measurable Impact",
+    "impactItems": {
+      "latency": {
+        "value": "From 72h to <2h",
+        "description": "Approval latency reduced by 97%"
+      },
+      "errors": {
+        "value": "85% Reduction",
+        "description": "In payroll errors (first 2 cycles)"
+      },
+      "adoption": {
+        "value": "100% Adoption",
+        "description": "Within 4 weeks of rollout"
+      }
+    },
+    "learnings": "Key Learnings",
+    "learningsItems": {
+      "ux": {
+        "title": "UX Simplicity is Critical:",
+        "description": "A simple, role-aware user interface dramatically reduced support requests and increased adoption rates."
+      },
+      "automation": {
+        "title": "Automation Drives Adoption:",
+        "description": "Automated reminders were essential for manager engagement and timely approvals."
+      },
+      "communication": {
+        "title": "Stakeholder Communication:",
+        "description": "Regular demos and feedback sessions ensured the solution met real user needs."
+      }
+    },
+    "techStack": "Technology Stack",
+    "cta": {
+      "text": "Interested in similar solutions for your organization?",
+      "letsTalk": "Let's Talk",
+      "close": "Close"
+    }
+  }
+}
+

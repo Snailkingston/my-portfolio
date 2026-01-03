@@ -1,9 +1,11 @@
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export function Skills() {
+  const { t } = useTranslation();
   const skillCategories = [
     {
-      category: 'Frontend',
+      categoryKey: 'skills.categories.frontend',
       color: 'blue',
       skills: [
         {name : 'TypeScript', level: 67},
@@ -16,7 +18,7 @@ export function Skills() {
       ],
     },
     {
-      category: 'Backend',
+      categoryKey: 'skills.categories.backend',
       color: 'indigo',
       skills: [
         {name : 'JavaScript', level : 99},
@@ -29,7 +31,7 @@ export function Skills() {
       ],
     },
     {
-      category: 'Database',
+      categoryKey: 'skills.categories.database',
       color: 'purple',
       skills: [
         {name : 'MySQL', level : 79},
@@ -42,7 +44,7 @@ export function Skills() {
       ],
     },
     {
-      category: 'Microsoft Ecosystem',
+      categoryKey: 'skills.categories.microsoft',
       color: 'pink',
       skills: [
         { name: 'Power Apps', level: 95 },
@@ -53,7 +55,7 @@ export function Skills() {
       ],
     },
     {
-      category: 'Cloud & DevOps',
+      categoryKey: 'skills.categories.cloud',
       color: 'cyan',
       skills: [
         { name: 'GitHub Actions', level: 88 },
@@ -63,7 +65,7 @@ export function Skills() {
       ],
     },
     {
-      category: 'Leadership & Tools',
+      categoryKey: 'skills.categories.leadership',
       color: 'emerald',
       skills: [
         { name: 'Agile / Scrum', level: 92 },
@@ -96,10 +98,10 @@ export function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">Technical Skills</span>
-          <h2 className="mt-2 text-slate-900 dark:text-slate-100">Full-Stack Technology Expertise</h2>
+          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">{t('skills.title')}</span>
+          <h2 className="mt-2 text-slate-900 dark:text-slate-100">{t('skills.subtitle')}</h2>
           <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            A comprehensive skill set spanning frontend, backend, cloud infrastructure, and project leadership
+            {t('skills.description')}
           </p>
         </motion.div>
 
@@ -117,7 +119,7 @@ export function Skills() {
               >
                 <div className="flex items-center space-x-3 mb-6">
                   <div className={`w-3 h-3 rounded-full ${colorClasses.bg}`} />
-                  <h3 className={`${colorClasses.text}`}>{category.category}</h3>
+                  <h3 className={`${colorClasses.text}`}>{t(category.categoryKey)}</h3>
                 </div>
 
                 <div className="space-y-4">
@@ -152,7 +154,7 @@ export function Skills() {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-slate-600 dark:text-slate-300 mb-4">Additional Tools & Technologies</p>
+          <p className="text-slate-600 dark:text-slate-300 mb-4">{t('skills.additionalTools')}</p>
           <div className="flex flex-wrap justify-center gap-3">
             {['Git', 'VS Code', 'Figma', 'Jira', 'OWASP', 'Unit Testing', 'Azure AD', 'Office Scripts', 'VBA'].map((tool, index) => (
               <span

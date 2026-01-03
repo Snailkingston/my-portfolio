@@ -1,6 +1,8 @@
 import { Github, Linkedin, Mail, Heart, Instagram, FacebookIcon, PhoneCall, X, Twitter, Twitch, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (sectionId: string) => {
@@ -12,6 +14,14 @@ export function Footer() {
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
+
+  // Footer sections with translation keys
+  const footerSections = [
+    { id: 'home', key: 'nav.home' },
+    { id: 'about', key: 'nav.about' },
+    { id: 'skills', key: 'nav.skills' },
+    { id: 'projects', key: 'nav.projects' },
+  ];
 
   return (
     <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12">
@@ -26,7 +36,7 @@ export function Footer() {
               <span>SUFFO NZOGANG PATRICE</span>
             </div>
             <p className="text-slate-400 dark:text-slate-500 mb-4 max-w-md">
-              Full-Stack Developer (Mobile and Web) & Microsoft Power Platform Specialist. Building production-ready solutions that deliver measurable impact.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-3">
                  <a
@@ -110,15 +120,15 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4">Quick Links</h4>
+            <h4 className="mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              {['home', 'about', 'skills', 'projects'].map((section) => (
-                <li key={section}>
+              {footerSections.map((section) => (
+                <li key={section.id}>
                   <button
-                    onClick={() => scrollToSection(section)}
-                    className="text-slate-400 dark:text-slate-500 hover:text-white dark:hover:text-slate-300 transition-colors capitalize"
+                    onClick={() => scrollToSection(section.id)}
+                    className="text-slate-400 dark:text-slate-500 hover:text-white dark:hover:text-slate-300 transition-colors"
                   >
-                    {section}
+                    {t(section.key)}
                   </button>
                 </li>
               ))}
@@ -127,12 +137,12 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4">Contact</h4>
+            <h4 className="mb-4">{t('footer.contactTitle')}</h4>
             <ul className="space-y-2 text-slate-400 dark:text-slate-500">
               <li><a href="mailto: patrice_nzogang@outlook.com">PATRICE_NZOGANG@OUTLOOK.COM</a></li>
               <li><a href="tel:+237697353791">+237-697-353-791</a></li>
-              <li>Available for remote work</li>
-              <li>English, French</li>
+              <li>{t('footer.availableRemote')}</li>
+              <li>{t('footer.languages')}</li>
             </ul>
           </div>
         </div>
@@ -140,10 +150,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-slate-400 dark:text-slate-500 text-sm">
-            © {currentYear} Suffo Nzogang Patrice. All rights reserved.
+            {t('footer.copyright', { year: currentYear })}
           </p>
           <p className="text-slate-400 dark:text-slate-500 text-sm flex items-center space-x-1">
-            <span>GOD FEARER</span>
+            <span>{t('footer.godFearer')}</span>
           </p>
         </div>
       </div>

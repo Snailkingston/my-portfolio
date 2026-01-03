@@ -12,8 +12,10 @@ import {
   PhoneIncoming,
   PhoneCall,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,11 +43,11 @@ export function Contact() {
         }, 3000);
       } else {
         console.error("Error sending email:", await res.text());
-        alert("Something went wrong. Please try again later.");
+        alert(t('contact.form.error'));
       }
     } catch (err) {
       console.error("Network error:", err);
-      alert("Network error. Please try again later.");
+      alert(t('contact.form.networkError'));
     }
   };
 
@@ -58,46 +60,47 @@ export function Contact() {
     }));
   };
 
+  // Contact methods with translation keys
   const contactMethods = [
     {
       icon: Mail,
-      label: "Email",
-      value: "SUFFO NZOGANG PATRICE",
+      labelKey: 'contact.methods.email.label',
+      valueKey: 'contact.methods.email.value',
       link: "mailto:patrice_nzogang@outlook.com",
       color: "blue",
     },
     {
       icon: Calendar,
-      label: "Schedule a Call",
-      value: "Book via Calendly",
+      labelKey: 'contact.methods.calendar.label',
+      valueKey: 'contact.methods.calendar.value',
       link: "https://calendly.com/patrice_nzogang/30min",
       color: "indigo",
     },
     {
       icon: Github,
-      label: "GitHub",
-      value: "View Projects",
+      labelKey: 'contact.methods.github.label',
+      valueKey: 'contact.methods.github.value',
       link: "https://github.com/Snailkingston",
       color: "purple",
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
-      value: "Connect",
+      labelKey: 'contact.methods.linkedin.label',
+      valueKey: 'contact.methods.linkedin.value',
       link: "https://www.linkedin.com/in/suffo-nzogang-patrice-43ba0628b/",
       color: "blue",
     },
     {
       icon: PhoneIncoming,
-      label: "WhatsApp",
-      value: "Message me let's work",
+      labelKey: 'contact.methods.whatsapp.label',
+      valueKey: 'contact.methods.whatsapp.value',
       link: "https://wa.me/+237697353791?text=Hello, Sir PATRICE NZOGANG %20I'd%20like%20to%20inquire%20about%20your%20services",
       color: "pink",
     },
     {
       icon: PhoneCall,
-      label: "Direct Call",
-      value: "Make a call let's work",
+      labelKey: 'contact.methods.phone.label',
+      valueKey: 'contact.methods.phone.value',
       link: "tel:+237697353791",
       color: "pink",
     },
@@ -147,14 +150,13 @@ export function Contact() {
           className="text-center mb-16"
         >
           <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">
-            Get In Touch
+            {t('contact.title')}
           </span>
           <h2 className="mt-2 text-slate-900 dark:text-slate-100">
-            Let's Work Together
+            {t('contact.subtitle')}
           </h2>
           <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Open to full-time roles, contract work, and technical consulting.
-            Let's discuss how I can help your team deliver impactful solutions.
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -168,7 +170,7 @@ export function Contact() {
           >
             <div>
               <h3 className="text-slate-900 dark:text-slate-100 mb-4">
-                Contact Methods
+                {t('contact.contactMethods')}
               </h3>
               <div className="space-y-4">
                 {contactMethods.map((method, index) => {
@@ -197,10 +199,10 @@ export function Contact() {
                       </div>
                       <div>
                         <div className="text-slate-900 group-hover:text-blue-600 transition-colors">
-                          {method.label}
+                          {t(method.labelKey)}
                         </div>
                         <div className="text-slate-600 text-sm">
-                          {method.value}
+                          {t(method.valueKey)}
                         </div>
                       </div>
                     </a>
@@ -212,7 +214,7 @@ export function Contact() {
             {/* Quick Info */}
             <div className="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
               <h4 className="text-slate-900 dark:text-slate-100 mb-4">
-                Quick Info
+                {t('contact.quickInfo')}
               </h4>
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-300">
@@ -220,21 +222,21 @@ export function Contact() {
                     size={16}
                     className="text-blue-600 dark:text-blue-400"
                   />
-                  <span>Available for remote work</span>
+                  <span>{t('contact.availableRemote')}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-300">
                   <Globe
                     size={16}
                     className="text-blue-600 dark:text-blue-400"
                   />
-                  <span>English, French</span>
+                  <span>{t('contact.languages')}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-300">
                   <CheckCircle
                     size={16}
                     className="text-green-600 dark:text-green-400"
                   />
-                  <span>Available for new opportunities</span>
+                  <span>{t('contact.availableOpportunities')}</span>
                 </div>
               </div>
             </div>
@@ -249,7 +251,7 @@ export function Contact() {
           >
             <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
               <h3 className="text-slate-900 dark:text-slate-100 mb-6">
-                Send a Message
+                {t('contact.sendMessage')}
               </h3>
 
               {isSubmitted ? (
@@ -265,10 +267,10 @@ export function Contact() {
                     />
                   </div>
                   <h4 className="text-slate-900 dark:text-slate-100 mb-2">
-                    Message Sent!
+                    {t('contact.messageSent')}
                   </h4>
                   <p className="text-slate-600 dark:text-slate-300">
-                    Thank you for reaching out. I'll get back to you soon.
+                    {t('contact.messageSentDesc')}
                   </p>
                 </motion.div>
               ) : (
@@ -279,7 +281,7 @@ export function Contact() {
                         htmlFor="name"
                         className="block text-slate-700 dark:text-slate-300 mb-2"
                       >
-                        Your Name
+                        {t('contact.form.name')}
                       </label>
                       <input
                         type="text"
@@ -289,7 +291,7 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="How can i called you sir?"
+                        placeholder={t('contact.form.namePlaceholder')}
                       />
                     </div>
                     <div>
@@ -297,7 +299,7 @@ export function Contact() {
                         htmlFor="email"
                         className="block text-slate-700 dark:text-slate-300 mb-2"
                       >
-                        Email Address
+                        {t('contact.form.email')}
                       </label>
                       <input
                         type="email"
@@ -307,7 +309,7 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="Gmail, outllook, Icloud and more..."
+                        placeholder={t('contact.form.emailPlaceholder')}
                       />
                     </div>
                   </div>
@@ -317,7 +319,7 @@ export function Contact() {
                       htmlFor="subject"
                       className="block text-slate-700 dark:text-slate-300 mb-2"
                     >
-                      Subject
+                      {t('contact.form.subject')}
                     </label>
                     <input
                       type="text"
@@ -327,7 +329,7 @@ export function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Project Inquiry"
+                      placeholder={t('contact.form.subjectPlaceholder')}
                     />
                   </div>
 
@@ -336,7 +338,7 @@ export function Contact() {
                       htmlFor="message"
                       className="block text-slate-700 dark:text-slate-300 mb-2"
                     >
-                      Message
+                      {t('contact.form.message')}
                     </label>
                     <textarea
                       id="message"
@@ -346,7 +348,7 @@ export function Contact() {
                       required
                       rows={6}
                       className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell me about your project..."
+                      placeholder={t('contact.form.messagePlaceholder')}
                     />
                   </div>
 
@@ -359,7 +361,7 @@ export function Contact() {
                       size={18}
                       className="group-hover:translate-x-1 transition-transform"
                     />
-                    <span>Send Message</span>
+                    <span>{t('contact.form.send')}</span>
                   </button>
                 </form>
               )}
@@ -374,24 +376,24 @@ export function Contact() {
           viewport={{ once: true }}
           className="mt-16 bg-white dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700"
         >
-          <h3 className="text-slate-900 dark:text-slate-100 mb-6 text-center">Reach Out For:</h3>
+          <h3 className="text-slate-900 dark:text-slate-100 mb-6 text-center">{t('contact.reachOut')}</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 rounded-lg">
-              <h4 className="text-blue-900 dark:text-blue-100 mb-2">Full-Time Roles</h4>
+              <h4 className="text-blue-900 dark:text-blue-100 mb-2">{t('contact.reachOutItems.fulltime.title')}</h4>
               <p className="text-slate-700 dark:text-slate-300 text-sm">
-                Looking for a full-stack engineer who can lead teams, deliver MVPs, and drive measurable results using React, Azure, and Power Platform.
+                {t('contact.reachOutItems.fulltime.description')}
               </p>
             </div>
             <div className="p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-950 dark:to-indigo-900 rounded-lg">
-              <h4 className="text-indigo-900 dark:text-indigo-100 mb-2">Contract Projects</h4>
+              <h4 className="text-indigo-900 dark:text-indigo-100 mb-2">{t('contact.reachOutItems.contract.title')}</h4>
               <p className="text-slate-700 dark:text-slate-300 text-sm">
-                Need a pragmatic developer to ship production features, dashboards, or Power Apps solutions that cut manual work and improve efficiency.
+                {t('contact.reachOutItems.contract.description')}
               </p>
             </div>
             <div className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 rounded-lg">
-              <h4 className="text-purple-900 dark:text-purple-100 mb-2">Open Source Collaboration</h4>
+              <h4 className="text-purple-900 dark:text-purple-100 mb-2">{t('contact.reachOutItems.opensource.title')}</h4>
               <p className="text-slate-700 dark:text-slate-300 text-sm">
-                Open to contributing to OSS projects, mentoring new contributors, and building tools that help the developer community.
+                {t('contact.reachOutItems.opensource.description')}
               </p>
             </div>
           </div>

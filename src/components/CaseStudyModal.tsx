@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle, TrendingUp, Users, Clock, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface CaseStudyModalProps {
   isOpen: boolean;
@@ -7,6 +8,45 @@ interface CaseStudyModalProps {
 }
 
 export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
+  const { t } = useTranslation();
+  
+  // Responsibilities with translation keys
+  const responsibilities = [
+    'caseStudy.responsibilityItems.product',
+    'caseStudy.responsibilityItems.database',
+    'caseStudy.responsibilityItems.ui',
+    'caseStudy.responsibilityItems.workflow',
+    'caseStudy.responsibilityItems.azure',
+    'caseStudy.responsibilityItems.training',
+    'caseStudy.responsibilityItems.stakeholder',
+    'caseStudy.responsibilityItems.support',
+  ];
+  
+  // Problem items with translation keys
+  const problemItems = [
+    'caseStudy.problemItems.errors',
+    'caseStudy.problemItems.delays',
+    'caseStudy.problemItems.audit',
+    'caseStudy.problemItems.fragmented',
+  ];
+  
+  // Solution items keys
+  const solutionItems = [
+    { titleKey: 'caseStudy.solutionItems.powerApps.title', descriptionKey: 'caseStudy.solutionItems.powerApps.description' },
+    { titleKey: 'caseStudy.solutionItems.powerAutomate.title', descriptionKey: 'caseStudy.solutionItems.powerAutomate.description' },
+    { titleKey: 'caseStudy.solutionItems.azureSql.title', descriptionKey: 'caseStudy.solutionItems.azureSql.description' },
+    { titleKey: 'caseStudy.solutionItems.blobStorage.title', descriptionKey: 'caseStudy.solutionItems.blobStorage.description' },
+    { titleKey: 'caseStudy.solutionItems.azureAd.title', descriptionKey: 'caseStudy.solutionItems.azureAd.description' },
+    { titleKey: 'caseStudy.solutionItems.payroll.title', descriptionKey: 'caseStudy.solutionItems.payroll.description' },
+  ];
+  
+  // Learnings items
+  const learningsItems = [
+    { titleKey: 'caseStudy.learningsItems.ux.title', descriptionKey: 'caseStudy.learningsItems.ux.description' },
+    { titleKey: 'caseStudy.learningsItems.automation.title', descriptionKey: 'caseStudy.learningsItems.automation.description' },
+    { titleKey: 'caseStudy.learningsItems.communication.title', descriptionKey: 'caseStudy.learningsItems.communication.description' },
+  ];
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -35,11 +75,11 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                     <div>
                       <div className="flex items-center space-x-2 mb-2">
                         <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs">
-                          Featured Case Study
+                          {t('caseStudy.badge')}
                         </span>
                       </div>
-                      <h2 className="text-white mb-2">Staff Time & Approval System</h2>
-                      <p className="text-indigo-100">Power Apps + Power Automate + Azure SQL</p>
+                      <h2 className="text-white mb-2">{t('caseStudy.title')}</h2>
+                      <p className="text-indigo-100">{t('caseStudy.subtitle')}</p>
                     </div>
                     <button
                       onClick={onClose}
@@ -55,16 +95,16 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                   {/* Project Overview */}
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="p-4 bg-blue-50 dark:bg-blue-950 rounded-xl">
-                      <div className="text-blue-600 dark:text-blue-400 mb-2">Role</div>
-                      <p className="text-slate-900 dark:text-slate-100">Lead Developer & Product Manager</p>
+                      <div className="text-blue-600 dark:text-blue-400 mb-2">{t('caseStudy.role')}</div>
+                      <p className="text-slate-900 dark:text-slate-100">{t('caseStudy.roleValue')}</p>
                     </div>
                     <div className="p-4 bg-indigo-50 dark:bg-indigo-950 rounded-xl">
-                      <div className="text-indigo-600 dark:text-indigo-400 mb-2">Timeline</div>
-                      <p className="text-slate-900 dark:text-slate-100">6 weeks (MVP)</p>
+                      <div className="text-indigo-600 dark:text-indigo-400 mb-2">{t('caseStudy.timeline')}</div>
+                      <p className="text-slate-900 dark:text-slate-100">{t('caseStudy.timelineValue')}</p>
                     </div>
                     <div className="p-4 bg-purple-50 dark:bg-purple-950 rounded-xl">
-                      <div className="text-purple-600 dark:text-purple-400 mb-2">Team Size</div>
-                      <p className="text-slate-900 dark:text-slate-100">4 members</p>
+                      <div className="text-purple-600 dark:text-purple-400 mb-2">{t('caseStudy.teamSize')}</div>
+                      <p className="text-slate-900 dark:text-slate-100">{t('caseStudy.teamSizeValue')}</p>
                     </div>
                   </div>
 
@@ -74,29 +114,19 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                       <div className="w-8 h-8 bg-red-100 dark:bg-red-950 rounded-lg flex items-center justify-center">
                         <span className="text-red-600 dark:text-red-400">⚠️</span>
                       </div>
-                      <h3 className="text-slate-900 dark:text-slate-100">The Problem</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100">{t('caseStudy.problem')}</h3>
                     </div>
                     <div className="pl-10 space-y-3">
                       <p className="text-slate-600 dark:text-slate-300">
-                        The company relied on spreadsheets and email threads for time reporting and leave approvals. This manual process caused significant challenges:
+                        {t('caseStudy.problemDesc')}
                       </p>
                       <ul className="space-y-2 text-slate-600 dark:text-slate-300">
-                        <li className="flex items-start space-x-2">
-                          <span className="text-red-500 mt-1">•</span>
-                          <span>Data entry errors leading to payroll discrepancies</span>
-                        </li>
-                        <li className="flex items-start space-x-2">
-                          <span className="text-red-500 mt-1">•</span>
-                          <span>Manual chasing of approvals causing delays (average 72 hours)</span>
-                        </li>
-                        <li className="flex items-start space-x-2">
-                          <span className="text-red-500 mt-1">•</span>
-                          <span>No audit trail or accountability for changes</span>
-                        </li>
-                        <li className="flex items-start space-x-2">
-                          <span className="text-red-500 mt-1">•</span>
-                          <span>Fragmented data across multiple spreadsheets</span>
-                        </li>
+                        {problemItems.map((itemKey, index) => (
+                          <li key={index} className="flex items-start space-x-2">
+                            <span className="text-red-500 mt-1">•</span>
+                            <span>{t(itemKey)}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -107,11 +137,11 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                       <div className="w-8 h-8 bg-blue-100 dark:bg-blue-950 rounded-lg flex items-center justify-center">
                         <span className="text-blue-600 dark:text-blue-400">🎯</span>
                       </div>
-                      <h3 className="text-slate-900 dark:text-slate-100">Project Goal</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100">{t('caseStudy.goal')}</h3>
                     </div>
                     <div className="pl-10">
                       <p className="text-slate-600 dark:text-slate-300">
-                        Replace spreadsheets with a single, unified app for staff to submit time and leave requests, managers to approve efficiently, and payroll to export validated records. The primary objectives were to reduce approval latency and eliminate data errors.
+                        {t('caseStudy.goalDesc')}
                       </p>
                     </div>
                   </div>
@@ -122,34 +152,16 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                       <div className="w-8 h-8 bg-green-100 dark:bg-green-950 rounded-lg flex items-center justify-center">
                         <CheckCircle className="text-green-600 dark:text-green-400" size={20} />
                       </div>
-                      <h3 className="text-slate-900 dark:text-slate-100">Solution Architecture</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100">{t('caseStudy.solution')}</h3>
                     </div>
                     <div className="pl-10 space-y-4">
                       <div className="grid md:grid-cols-2 gap-4">
-                        <div className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
-                          <h4 className="text-slate-900 dark:text-slate-100 mb-2">Power Apps Canvas</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-sm">Mobile + desktop form submission for time entries, leave requests, and attachment uploads</p>
-                        </div>
-                        <div className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
-                          <h4 className="text-slate-900 dark:text-slate-100 mb-2">Power Automate Flows</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-sm">Automated approval routing by manager, reminders, and complete audit trail</p>
-                        </div>
-                        <div className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
-                          <h4 className="text-slate-900 dark:text-slate-100 mb-2">Azure SQL Database</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-sm">Single source of truth for all time and approval records</p>
-                        </div>
-                        <div className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
-                          <h4 className="text-slate-900 dark:text-slate-100 mb-2">Azure Blob Storage</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-sm">Secure storage for attachments and supporting documents</p>
-                        </div>
-                        <div className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
-                          <h4 className="text-slate-900 dark:text-slate-100 mb-2">Azure AD Integration</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-sm">Role-based access control using Azure AD groups</p>
-                        </div>
-                        <div className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
-                          <h4 className="text-slate-900 dark:text-slate-100 mb-2">Payroll Export</h4>
-                          <p className="text-slate-600 dark:text-slate-300 text-sm">Nightly automated flow to CSV format for payroll system</p>
-                        </div>
+                        {solutionItems.map((item, index) => (
+                          <div key={index} className="p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
+                            <h4 className="text-slate-900 dark:text-slate-100 mb-2">{t(item.titleKey)}</h4>
+                            <p className="text-slate-600 dark:text-slate-300 text-sm">{t(item.descriptionKey)}</p>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -160,23 +172,14 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                       <div className="w-8 h-8 bg-purple-100 dark:bg-purple-950 rounded-lg flex items-center justify-center">
                         <Users className="text-purple-600 dark:text-purple-400" size={20} />
                       </div>
-                      <h3 className="text-slate-900 dark:text-slate-100">My Responsibilities</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100">{t('caseStudy.responsibilities')}</h3>
                     </div>
                     <div className="pl-10">
                       <div className="grid md:grid-cols-2 gap-3">
-                        {[
-                          'Product definition and requirements gathering',
-                          'Database schema design and optimization',
-                          'Power Apps UI/UX design and development',
-                          'Power Automate workflow configuration',
-                          'Azure infrastructure setup and configuration',
-                          'User training and rollout management',
-                          'Stakeholder communication and demos',
-                          'Post-launch support and iteration'
-                        ].map((item, index) => (
+                        {responsibilities.map((itemKey, index) => (
                           <div key={index} className="flex items-start space-x-2">
                             <CheckCircle className="text-green-500 dark:text-green-400 flex-shrink-0 mt-1" size={16} />
-                            <span className="text-slate-600 dark:text-slate-300 text-sm">{item}</span>
+                            <span className="text-slate-600 dark:text-slate-300 text-sm">{t(itemKey)}</span>
                           </div>
                         ))}
                       </div>
@@ -189,23 +192,23 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                       <div className="w-8 h-8 bg-amber-100 dark:bg-amber-950 rounded-lg flex items-center justify-center">
                         <TrendingUp className="text-amber-600 dark:text-amber-400" size={20} />
                       </div>
-                      <h3 className="text-slate-900 dark:text-slate-100">Measurable Impact</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100">{t('caseStudy.impact')}</h3>
                     </div>
                     <div className="pl-10 grid md:grid-cols-3 gap-6">
                       <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900 rounded-xl text-center">
                         <Clock className="text-blue-600 dark:text-blue-400 mx-auto mb-2" size={32} />
-                        <div className="text-blue-600 dark:text-blue-400 mb-1">From 72h to {'<'}2h</div>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm">Approval latency reduced by 97%</p>
+                        <div className="text-blue-600 dark:text-blue-400 mb-1">{t('caseStudy.impactItems.latency.value')}</div>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">{t('caseStudy.impactItems.latency.description')}</p>
                       </div>
                       <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 rounded-xl text-center">
                         <CheckCircle className="text-green-600 dark:text-green-400 mx-auto mb-2" size={32} />
-                        <div className="text-green-600 dark:text-green-400 mb-1">85% Reduction</div>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm">In payroll errors (first 2 cycles)</p>
+                        <div className="text-green-600 dark:text-green-400 mb-1">{t('caseStudy.impactItems.errors.value')}</div>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">{t('caseStudy.impactItems.errors.description')}</p>
                       </div>
                       <div className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 rounded-xl text-center">
                         <Award className="text-purple-600 dark:text-purple-400 mx-auto mb-2" size={32} />
-                        <div className="text-purple-600 dark:text-purple-400 mb-1">100% Adoption</div>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm">Within 4 weeks of rollout</p>
+                        <div className="text-purple-600 dark:text-purple-400 mb-1">{t('caseStudy.impactItems.adoption.value')}</div>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">{t('caseStudy.impactItems.adoption.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -216,30 +219,25 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                       <div className="w-8 h-8 bg-indigo-100 dark:bg-indigo-950 rounded-lg flex items-center justify-center">
                         <span className="text-indigo-600 dark:text-indigo-400">💡</span>
                       </div>
-                      <h3 className="text-slate-900 dark:text-slate-100">Key Learnings</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100">{t('caseStudy.learnings')}</h3>
                     </div>
                     <div className="pl-10 space-y-3">
-                      <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border-l-4 border-blue-600 dark:border-blue-500">
-                        <p className="text-slate-700 dark:text-slate-300">
-                          <strong>UX Simplicity is Critical:</strong> A simple, role-aware user interface dramatically reduced support requests and increased adoption rates.
-                        </p>
-                      </div>
-                      <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border-l-4 border-indigo-600 dark:border-indigo-500">
-                        <p className="text-slate-700 dark:text-slate-300">
-                          <strong>Automation Drives Adoption:</strong> Automated reminders were essential for manager engagement and timely approvals.
-                        </p>
-                      </div>
-                      <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border-l-4 border-purple-600 dark:border-purple-500">
-                        <p className="text-slate-700 dark:text-slate-300">
-                          <strong>Stakeholder Communication:</strong> Regular demos and feedback sessions ensured the solution met real user needs.
-                        </p>
-                      </div>
+                      {learningsItems.map((item, index) => {
+                        const borderColors = ['border-blue-600 dark:border-blue-500', 'border-indigo-600 dark:border-indigo-500', 'border-purple-600 dark:border-purple-500'];
+                        return (
+                          <div key={index} className={`p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border-l-4 ${borderColors[index]}`}>
+                            <p className="text-slate-700 dark:text-slate-300">
+                              <strong>{t(item.titleKey)}</strong> {t(item.descriptionKey)}
+                            </p>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
 
                   {/* Tech Stack Summary */}
                   <div>
-                    <h3 className="text-slate-900 dark:text-slate-100 mb-4">Technology Stack</h3>
+                    <h3 className="text-slate-900 dark:text-slate-100 mb-4">{t('caseStudy.techStack')}</h3>
                     <div className="flex flex-wrap gap-2">
                       {[
                         'Power Apps',
@@ -263,7 +261,7 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                   {/* CTA */}
                   <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
                     <p className="text-slate-600 dark:text-slate-300 text-center mb-4">
-                      Interested in similar solutions for your organization?
+                      {t('caseStudy.cta.text')}
                     </p>
                     <div className="flex justify-center space-x-4">
                       <a
@@ -281,13 +279,13 @@ export function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps) {
                         }}
                         className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
                       >
-                        Let's Talk
+                        {t('caseStudy.cta.letsTalk')}
                       </a>
                       <button
                         onClick={onClose}
                         className="px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
                       >
-                        Close
+                        {t('caseStudy.cta.close')}
                       </button>
                     </div>
                   </div>

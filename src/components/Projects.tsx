@@ -1,65 +1,69 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectsProps {
   onOpenCaseStudy: () => void;
 }
 
 export function Projects({ onOpenCaseStudy }: ProjectsProps) {
+  const { t } = useTranslation();
+  
+  // Featured projects with translation keys
   const featuredProjects = [
     {
-      title: 'Operational Dashboard',
-      subtitle: 'Power BI + Azure Data Pipeline',
-      description: 'Built a real-time operations dashboard for enterprise using Power BI and Azure Data Factory. Connected CSV, SQL and API sources, implemented refresh pipelines, and created user roles.',
-      impact: '40% faster decision time for managers',
+      titleKey: 'projects.featured.dashboard.title',
+      subtitleKey: 'projects.featured.dashboard.subtitle',
+      descriptionKey: 'projects.featured.dashboard.description',
+      impactKey: 'projects.featured.dashboard.impact',
       tags: ['Power BI', 'Azure Data Factory', 'SQL', 'REST APIs'],
       color: 'blue',
       image: 'dashboard analytics',
     },
     {
-      title: 'Staff Time & Approval System',
-      subtitle: 'Power Apps + Azure SQL',
-      description: 'Created a staff-time tracking and approval app with Power Apps, automated approvals with Power Automate, and stored records in Azure SQL. Replaced manual spreadsheets.',
-      impact: '85% reduction in payroll errors',
+      titleKey: 'projects.featured.staffTime.title',
+      subtitleKey: 'projects.featured.staffTime.subtitle',
+      descriptionKey: 'projects.featured.staffTime.description',
+      impactKey: 'projects.featured.staffTime.impact',
       tags: ['Power Apps', 'Power Automate', 'Azure SQL', 'Azure AD'],
       color: 'indigo',
       isCaseStudy: true,
       image: 'business workflow',
     },
-    
     {
-      title: 'Customer Portal',
-      subtitle: 'React + Node.js + Azure',
-      description: 'End-to-end portal for clients to track orders, invoices, and messages. Implemented JWT auth, Azure Blob storage for media, and serverless functions for webhooks.',
-      impact: '18% increase in on-time payments',
+      titleKey: 'projects.featured.portal.title',
+      subtitleKey: 'projects.featured.portal.subtitle',
+      descriptionKey: 'projects.featured.portal.description',
+      impactKey: 'projects.featured.portal.impact',
       tags: ['React', 'Node.js', 'Azure Functions', 'JWT', 'Blob Storage'],
       color: 'purple',
       image: 'customer portal',
     },
   ];
 
+  // Other projects with translation keys
   const otherProjects = [
     {
-      title: 'Expense Tracker',
-      description: 'React + Node mini-app with CSV import/export functionality',
+      titleKey: 'projects.other.expenseTracker.title',
+      descriptionKey: 'projects.other.expenseTracker.description',
       tags: ['React', 'Node.js', 'CSV Parser'],
       link: '#',
     },
     {
-      title: 'Office Automation Script',
-      description: 'Excel automation using Office Scripts for monthly data consolidation',
+      titleKey: 'projects.other.officeAutomation.title',
+      descriptionKey: 'projects.other.officeAutomation.description',
       tags: ['Office Scripts', 'TypeScript', 'Excel'],
       link: '#',
     },
     {
-      title: 'Event RSVP App',
-      description: 'Serverless event management app built in 48-hour hackathon',
+      titleKey: 'projects.other.eventRSVP.title',
+      descriptionKey: 'projects.other.eventRSVP.description',
       tags: ['Azure Functions', 'React', 'Cosmos DB'],
       link: '#',
     },
     {
-      title: 'Open Source CLI Tool',
-      description: 'Command-line utility for developers (250+ stars on GitHub)',
+      titleKey: 'projects.other.cliTool.title',
+      descriptionKey: 'projects.other.cliTool.description',
       tags: ['Node.js', 'CLI', 'Open Source'],
       link: '#',
     },
@@ -84,10 +88,10 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">Portfolio</span>
-          <h2 className="mt-2 text-slate-900 dark:text-slate-100">Featured Projects</h2>
+          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">{t('projects.title')}</span>
+          <h2 className="mt-2 text-slate-900 dark:text-slate-100">{t('projects.subtitle')}</h2>
           <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Production-ready applications delivering measurable business impact
+            {t('projects.description')}
           </p>
         </motion.div>
 
@@ -120,20 +124,20 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
                 <div className="p-6 space-y-4">
                   <div>
                     <div className="flex items-start justify-between mb-2">
-                      <h3 className="text-slate-900 dark:text-slate-100 flex-1">{project.title}</h3>
+                      <h3 className="text-slate-900 dark:text-slate-100 flex-1">{t(project.titleKey)}</h3>
                       {project.isCaseStudy && (
                         <span className="px-2 py-1 bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 text-xs rounded">
-                          Case Study
+                          {t('projects.caseStudy')}
                         </span>
                       )}
                     </div>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm">{project.subtitle}</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">{t(project.subtitleKey)}</p>
                   </div>
 
-                  <p className="text-slate-600 dark:text-slate-300 text-sm">{project.description}</p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm">{t(project.descriptionKey)}</p>
 
                   <div className={`px-4 py-3 ${colorClasses.badge} rounded-lg`}>
-                    <p className="text-sm">📊 {project.impact}</p>
+                    <p className="text-sm">📊 {t(project.impactKey)}</p>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
@@ -152,7 +156,7 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
                       onClick={onOpenCaseStudy}
                       className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all group/btn"
                     >
-                      <span>View Full Case Study</span>
+                      <span>{t('projects.viewCaseStudy')}</span>
                       <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                     </button>
                   )}
@@ -170,8 +174,8 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
           className="space-y-6"
         >
           <div className="text-center">
-            <h3 className="text-slate-900 dark:text-slate-100">Other Projects & Open Source</h3>
-            <p className="text-slate-600 dark:text-slate-300 mt-2">Additional work and contributions</p>
+            <h3 className="text-slate-900 dark:text-slate-100">{t('projects.otherProjects')}</h3>
+            <p className="text-slate-600 dark:text-slate-300 mt-2">{t('projects.otherProjectsDesc')}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -190,9 +194,9 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-slate-900 dark:text-slate-100 mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    {project.title}
+                    {t(project.titleKey)}
                   </h4>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm mb-3">{project.description}</p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm mb-3">{t(project.descriptionKey)}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span

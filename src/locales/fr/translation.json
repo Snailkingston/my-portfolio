@@ -1,0 +1,381 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "impact": "Impact",
+    "testimonials": "Témoignages",
+    "blog": "Blog",
+    "contact": "Contact",
+    "resume": "CV",
+    "toggleTheme": "Basculer le thème"
+  },
+  "hero": {
+    "available": "Disponible pour de nouvelles opportunités",
+    "title": "Développeur Full-Stack & Spécialiste Microsoft Power Platform",
+    "description": "Je construis des applications web, des applications mobiles, SaaS, Power Apps et des tableaux de bord alimentés par Azure — rapides, sécurisés et axés sur un impact mesurable. Je transforme les problèmes métier en solutions fonctionnelles que les parties prenantes utilisent réellement.",
+    "mvpsDelivered": "MVP Livrés",
+    "errorReduction": "Réduction d'erreurs",
+    "usersOnboarded": "Utilisateurs Intégrés",
+    "viewProjects": "Voir les Projets",
+    "scheduleCall": "Planifier un Appel",
+    "connect": "Se connecter :",
+    "codeComment": "Construction de solutions évolutives",
+    "fullStack": "FULL-STACK",
+    "powerPlatforms": "PLATEFORMES POWER"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Construire des Solutions qui Comptent",
+    "intro1": "Je suis <strong>{{name}}</strong> Un développeur full-stack et chef de projet expérimenté dans la construction d'applications web, d'applications mobiles, d'applications de bureau Python et de manipulation d'applications Power",
+    "intro2": "Je combine le développement pratique (front-end, back-end, bases de données, CI et CD) avec l'expertise des piles Microsoft (Power Platform, automatisation Office, etc.) pour livrer des MVP prêts pour la production et des fonctionnalités évolutives.",
+    "intro3": "J'aime diriger de petites équipes, encadrer les contributeurs et livrer des outils open-source. Je privilégie des objectifs produits clairs, des cycles de retour rapides et des métriques qui prouvent la valeur.",
+    "intro4": "J'adore apprendre de nouvelles technologies et participer à des projets open source",
+    "tags": {
+      "productMinded": "Orientation Produit",
+      "agileLeader": "Leader Agile",
+      "openSource": "Open Source",
+      "mentor": "Mentor",
+      "businessMinded": "Orientation Affaires"
+    },
+    "highlights": {
+      "fullStack": {
+        "title": "Expertise Full-Stack",
+        "description": "FrontEnd, BackEnd, Bases de données, CI/CD et Microsoft Power Platform"
+      },
+      "leadership": {
+        "title": "Leadership de Projet",
+        "description": "Diriger des équipes pour livrer des MVP de production en cycles de 6-8 semaines"
+      },
+      "mentorship": {
+        "title": "Mentorat",
+        "description": "Coacher des développeurs juniors et contribuer à l'open-source"
+      },
+      "results": {
+        "title": "Résultats Mesurables",
+        "description": "Réduction du travail manuel de 40-85% sur les projets"
+      }
+    }
+  },
+  "skills": {
+    "title": "Compétences Techniques",
+    "subtitle": "Expertise Technologique Full-Stack",
+    "description": "Un ensemble de compétences complet couvrant le frontend, le backend, l'infrastructure cloud et le leadership de projet",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de données",
+      "microsoft": "Écosystème Microsoft",
+      "cloud": "Cloud & DevOps",
+      "leadership": "Leadership & Outils"
+    },
+    "additionalTools": "Outils & Technologies Supplémentaires"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "subtitle": "Projets Phares",
+    "description": "Applications prêtes pour la production offrant un impact commercial mesurable",
+    "caseStudy": "Étude de Cas",
+    "viewCaseStudy": "Voir l'Étude de Cas Complète",
+    "otherProjects": "Autres Projets & Open Source",
+    "otherProjectsDesc": "Travaux et contributions supplémentaires",
+    "featured": {
+      "dashboard": {
+        "title": "Tableau de Bord Opérationnel",
+        "subtitle": "Power BI + Pipeline de Données Azure",
+        "description": "Création d'un tableau de bord opérationnel en temps réel pour une entreprise utilisant Power BI et Azure Data Factory. Connexion de sources CSV, SQL et API, implémentation de pipelines de rafraîchissement et création de rôles utilisateurs.",
+        "impact": "40% de décision plus rapide pour les managers"
+      },
+      "staffTime": {
+        "title": "Système de Temps & Approbation du Personnel",
+        "subtitle": "Power Apps + Azure SQL",
+        "description": "Création d'une application de suivi du temps et d'approbation avec Power Apps, automatisation des approbations avec Power Automate, et stockage des enregistrements dans Azure SQL. Remplacement des feuilles de calcul manuelles.",
+        "impact": "85% de réduction des erreurs de paie"
+      },
+      "portal": {
+        "title": "Portail Client",
+        "subtitle": "React + Node.js + Azure",
+        "description": "Portail de bout en bout pour les clients pour suivre les commandes, les factures et les messages. Implémentation de l'authentification JWT, stockage Azure Blob pour les médias et fonctions serverless pour les webhooks.",
+        "impact": "18% d'augmentation des paiements à temps"
+      }
+    },
+    "other": {
+      "expenseTracker": {
+        "title": "Suivi des Dépenses",
+        "description": "Mini-application React + Node avec fonctionnalité d'import/export CSV"
+      },
+      "officeAutomation": {
+        "title": "Script d'Automatisation Office",
+        "description": "Automatisation Excel utilisant Office Scripts pour la consolidation mensuelle des données"
+      },
+      "eventRSVP": {
+        "title": "Application RSVP d'Événement",
+        "description": "Application de gestion d'événements serverless construite en 48 heures de hackathon"
+      },
+      "cliTool": {
+        "title": "Outil CLI Open Source",
+        "description": "Utilitaire en ligne de commande pour développeurs (250+ étoiles sur GitHub)"
+      }
+    }
+  },
+  "impact": {
+    "title": "Résultats Mesurables",
+    "subtitle": "Impact & Réalisations",
+    "description": "Livrer des solutions qui créent une valeur réelle, étayées par des données",
+    "metrics": {
+      "reduction": {
+        "value": "40-85%",
+        "label": "Réduction du Temps de Traitement Manuel",
+        "description": "Sur tous les projets"
+      },
+      "mvps": {
+        "value": "3",
+        "label": "MVP de Production Livrés",
+        "description": "Au cours des 12 derniers mois"
+      },
+      "throughput": {
+        "value": "18%",
+        "label": "Augmentation du Débit de Paiement",
+        "description": "Projet portail client"
+      },
+      "users": {
+        "value": "100+",
+        "label": "Utilisateurs Intégrés",
+        "description": "Solution Power Apps en 4 semaines"
+      },
+      "approval": {
+        "value": "97%",
+        "label": "Temps d'Approbation Plus Rapides",
+        "description": "De 72h à moins de 2 heures"
+      },
+      "errors": {
+        "value": "85%",
+        "label": "Réduction des Erreurs",
+        "description": "Amélioration de la précision de la paie"
+      }
+    },
+    "leadershipTitle": "Points Forts de Leadership & Expérience",
+    "achievements": {
+      "squad": "Dirigé une équipe interfonctionnelle de 4 personnes pour lancer des MVP de production en cycles de 6-8 semaines",
+      "stakeholder": "Géré l'intégration des parties prenantes, la priorisation des exigences et la validation UAT",
+      "mentored": "Encadré 3 développeurs juniors avec des revues de code et des meilleures pratiques",
+      "opensource": "Contributeur open-source actif avec plusieurs PR fusionnés et triage de problèmes"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce que les Gens Disent",
+    "description": "Retours de collègues, managers et clients avec lesquels j'ai travaillé",
+    "items": {
+      "joseph": {
+        "quote": "Suffo a livré notre tableau de bord opérationnel en moins de 3 semaines et a formé nos managers — travail exceptionnel et communication remarquable tout au long.",
+        "author": "Joseph Kobe",
+        "role": "Directeur des Opérations",
+        "company": "PDG ICES Academy"
+      },
+      "sarah": {
+        "quote": "Excellent communicateur qui a livré le MVP rapidement et a géré les retours professionnellement. La solution Power Apps a transformé notre flux de travail.",
+        "author": "Sarah Johnson",
+        "role": "Directrice RH",
+        "company": "Enterprise Solutions Inc"
+      },
+      "ndongmo": {
+        "quote": "L'expertise technique de Suffo combinée à ses compétences en gestion de projet a rendu notre migration Azure fluide et réussie. Je recommande vivement !",
+        "author": "Ndongmo Laur",
+        "role": "CTO",
+        "company": "CloudFirst Ventures"
+      }
+    },
+    "socialProof": {
+      "githubStars": "Étoiles GitHub",
+      "prs": "PR Open Source",
+      "projectsDelivered": "Projets Livrés"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights & Tutoriels",
+    "description": "Guides pratiques, leçons apprises et analyses approfondies sur le développement full-stack, Power Platform et le leadership technique",
+    "searchPlaceholder": "Rechercher des articles...",
+    "noResults": "Aucun article trouvé. Essayez d'ajuster votre recherche ou vos filtres.",
+    "newsletter": {
+      "title": "Restez Informé",
+      "description": "Soyez notifié lorsque je publie de nouveaux articles sur le développement full-stack et Power Platform",
+      "placeholder": "votre.email@exemple.com",
+      "subscribe": "S'abonner"
+    }
+  },
+  "contact": {
+    "title": "Entrer en Contact",
+    "subtitle": "Travaillons Ensemble",
+    "description": "Ouvert aux rôles à temps plein, au travail contractuel et au conseil technique. Discutons de la façon dont je peux aider votre équipe à livrer des solutions percutantes.",
+    "contactMethods": "Méthodes de Contact",
+    "quickInfo": "Info Rapide",
+    "availableRemote": "Disponible pour le travail à distance",
+    "languages": "Anglais, Français",
+    "availableOpportunities": "Disponible pour de nouvelles opportunités",
+    "sendMessage": "Envoyer un Message",
+    "messageSent": "Message Envoyé !",
+    "messageSentDesc": "Merci de votre contact. Je reviendrai vers vous bientôt.",
+    "form": {
+      "name": "Votre Nom",
+      "namePlaceholder": "Comment puis-je vous appeler ?",
+      "email": "Adresse Email",
+      "emailPlaceholder": "Gmail, Outlook, Icloud et plus...",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Demande de Projet",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet...",
+      "send": "Envoyer le Message",
+      "error": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+      "networkError": "Erreur réseau. Veuillez réessayer plus tard."
+    },
+    "methods": {
+      "email": {
+        "label": "Email",
+        "value": "SUFFO NZOGANG PATRICE"
+      },
+      "calendar": {
+        "label": "Planifier un Appel",
+        "value": "Réserver via Calendly"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "Voir les Projets"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Se connecter"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "Envoyez-moi un message, travaillons ensemble"
+      },
+      "phone": {
+        "label": "Appel Direct",
+        "value": "Passez un appel, travaillons ensemble"
+      }
+    },
+    "reachOut": "Contactez-moi pour :",
+    "reachOutItems": {
+      "fulltime": {
+        "title": "Rôles à Temps Plein",
+        "description": "Recherche d'un ingénieur full-stack qui peut diriger des équipes, livrer des MVP et obtenir des résultats mesurables en utilisant React, Azure et Power Platform."
+      },
+      "contract": {
+        "title": "Projets Contractuels",
+        "description": "Besoin d'un développeur pragmatique pour livrer des fonctionnalités de production, des tableaux de bord ou des solutions Power Apps qui réduisent le travail manuel et améliorent l'efficacité."
+      },
+      "opensource": {
+        "title": "Collaboration Open Source",
+        "description": "Ouvert à contribuer à des projets OSS, encadrer de nouveaux contributeurs et construire des outils qui aident la communauté des développeurs."
+      }
+    }
+  },
+  "footer": {
+    "description": "Développeur Full-Stack (Mobile et Web) & Spécialiste Microsoft Power Platform. Construction de solutions prêtes pour la production qui offrent un impact mesurable.",
+    "quickLinks": "Liens Rapides",
+    "contactTitle": "Contact",
+    "availableRemote": "Disponible pour le travail à distance",
+    "languages": "Anglais, Français",
+    "copyright": "© {{year}} Suffo Nzogang Patrice. Tous droits réservés.",
+    "godFearer": "CRAINT DIEU"
+  },
+  "caseStudy": {
+    "badge": "Étude de Cas Phare",
+    "title": "Système de Temps & Approbation du Personnel",
+    "subtitle": "Power Apps + Power Automate + Azure SQL",
+    "role": "Rôle",
+    "roleValue": "Développeur Principal & Chef de Produit",
+    "timeline": "Calendrier",
+    "timelineValue": "6 semaines (MVP)",
+    "teamSize": "Taille de l'Équipe",
+    "teamSizeValue": "4 membres",
+    "problem": "Le Problème",
+    "problemDesc": "L'entreprise s'appuyait sur des feuilles de calcul et des fils de discussion par email pour la déclaration de temps et les approbations de congés. Ce processus manuel a causé des défis importants :",
+    "problemItems": {
+      "errors": "Erreurs de saisie de données entraînant des écarts de paie",
+      "delays": "Poursuite manuelle des approbations causant des retards (moyenne de 72 heures)",
+      "audit": "Aucune traçabilité ou responsabilité pour les modifications",
+      "fragmented": "Données fragmentées sur plusieurs feuilles de calcul"
+    },
+    "goal": "Objectif du Projet",
+    "goalDesc": "Remplacer les feuilles de calcul par une application unique et unifiée pour que le personnel soumette les demandes de temps et de congés, les managers approuvent efficacement et la paie exporte les enregistrements validés. Les objectifs principaux étaient de réduire la latence d'approbation et d'éliminer les erreurs de données.",
+    "solution": "Architecture de la Solution",
+    "solutionItems": {
+      "powerApps": {
+        "title": "Canvas Power Apps",
+        "description": "Soumission de formulaire mobile + bureau pour les entrées de temps, les demandes de congés et les téléchargements de pièces jointes"
+      },
+      "powerAutomate": {
+        "title": "Flux Power Automate",
+        "description": "Routage d'approbation automatisé par manager, rappels et traçabilité complète"
+      },
+      "azureSql": {
+        "title": "Base de Données Azure SQL",
+        "description": "Source unique de vérité pour tous les enregistrements de temps et d'approbation"
+      },
+      "blobStorage": {
+        "title": "Stockage Blob Azure",
+        "description": "Stockage sécurisé pour les pièces jointes et documents justificatifs"
+      },
+      "azureAd": {
+        "title": "Intégration Azure AD",
+        "description": "Contrôle d'accès basé sur les rôles utilisant les groupes Azure AD"
+      },
+      "payroll": {
+        "title": "Export de Paie",
+        "description": "Flux automatisé nocturne au format CSV pour le système de paie"
+      }
+    },
+    "responsibilities": "Mes Responsabilités",
+    "responsibilityItems": {
+      "product": "Définition du produit et collecte des exigences",
+      "database": "Conception et optimisation du schéma de base de données",
+      "ui": "Conception et développement UI/UX Power Apps",
+      "workflow": "Configuration des flux de travail Power Automate",
+      "azure": "Configuration et configuration de l'infrastructure Azure",
+      "training": "Formation des utilisateurs et gestion du déploiement",
+      "stakeholder": "Communication avec les parties prenantes et démos",
+      "support": "Support post-lancement et itération"
+    },
+    "impact": "Impact Mesurable",
+    "impactItems": {
+      "latency": {
+        "value": "De 72h à <2h",
+        "description": "Latence d'approbation réduite de 97%"
+      },
+      "errors": {
+        "value": "Réduction de 85%",
+        "description": "Des erreurs de paie (2 premiers cycles)"
+      },
+      "adoption": {
+        "value": "Adoption à 100%",
+        "description": "Dans les 4 semaines suivant le déploiement"
+      }
+    },
+    "learnings": "Apprentissages Clés",
+    "learningsItems": {
+      "ux": {
+        "title": "La Simplicité UX est Cruciale :",
+        "description": "Une interface utilisateur simple et consciente des rôles a considérablement réduit les demandes de support et augmenté les taux d'adoption."
+      },
+      "automation": {
+        "title": "L'Automatisation Favorise l'Adoption :",
+        "description": "Les rappels automatisés étaient essentiels pour l'engagement des managers et les approbations en temps opportun."
+      },
+      "communication": {
+        "title": "Communication avec les Parties Prenantes :",
+        "description": "Des démos régulières et des sessions de retour ont permis de s'assurer que la solution répondait aux besoins réels des utilisateurs."
+      }
+    },
+    "techStack": "Pile Technologique",
+    "cta": {
+      "text": "Intéressé par des solutions similaires pour votre organisation ?",
+      "letsTalk": "Parlons-en",
+      "close": "Fermer"
+    }
+  }
+}
+

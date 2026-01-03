@@ -1,27 +1,31 @@
 import { motion } from 'motion/react';
 import { Quote, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Testimonials() {
+  const { t } = useTranslation();
+  
+  // Testimonials with translation keys
   const testimonials = [
     {
-      quote: "Suffo delivered our operational dashboard in under 3 weeks and trained our managers — outstanding work and exceptional communication throughout.",
+      quoteKey: 'testimonials.items.joseph.quote',
       author: "Joseph Kobe",
-      role: "Operations Manager",
-      company: "CEO ICES Academy",
+      roleKey: 'testimonials.items.joseph.role',
+      companyKey: 'testimonials.items.joseph.company',
       rating: 5,
     },
     {
-      quote: "Great communicator who shipped the MVP quickly and handled feedback professionally. The Power Apps solution transformed our workflow.",
+      quoteKey: 'testimonials.items.sarah.quote',
       author: "Sarah Johnson",
-      role: "HR Director",
-      company: "Enterprise Solutions Inc",
+      roleKey: 'testimonials.items.sarah.role',
+      companyKey: 'testimonials.items.sarah.company',
       rating: 5,
     },
     {
-      quote: "Suffo's technical expertise combined with project management skills made our Azure migration smooth and successful. Highly recommend!",
+      quoteKey: 'testimonials.items.ndongmo.quote',
       author: "Ndongmo Laur",
-      role: "CTO",
-      company: "CloudFirst Ventures",
+      roleKey: 'testimonials.items.ndongmo.role',
+      companyKey: 'testimonials.items.ndongmo.company',
       rating: 5,
     },
   ];
@@ -36,10 +40,10 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">Testimonials</span>
-          <h2 className="mt-2 text-slate-900 dark:text-slate-100">What People Say</h2>
+          <span className="text-blue-600 dark:text-blue-400 uppercase tracking-wide">{t('testimonials.title')}</span>
+          <h2 className="mt-2 text-slate-900 dark:text-slate-100">{t('testimonials.subtitle')}</h2>
           <p className="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Feedback from colleagues, managers, and clients I've worked with
+            {t('testimonials.description')}
           </p>
         </motion.div>
 
@@ -67,7 +71,7 @@ export function Testimonials() {
 
               {/* Quote */}
               <p className="text-slate-700 dark:text-slate-300 mb-6 relative z-10 italic">
-                "{testimonial.quote}"
+                "{t(testimonial.quoteKey)}"
               </p>
 
               {/* Author */}
@@ -77,8 +81,8 @@ export function Testimonials() {
                 </div>
                 <div>
                   <div className="text-slate-900 dark:text-slate-100">{testimonial.author}</div>
-                  <div className="text-slate-500 dark:text-slate-400 text-sm">{testimonial.role}</div>
-                  <div className="text-slate-400 dark:text-slate-500 text-xs">{testimonial.company}</div>
+                  <div className="text-slate-500 dark:text-slate-400 text-sm">{t(testimonial.roleKey)}</div>
+                  <div className="text-slate-400 dark:text-slate-500 text-xs">{t(testimonial.companyKey)}</div>
                 </div>
               </div>
             </motion.div>
@@ -95,17 +99,17 @@ export function Testimonials() {
           <div className="inline-flex items-center space-x-8 px-8 py-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
             <div className="text-center">
               <div className="text-blue-600 dark:text-blue-400">+++</div>
-              <div className="text-slate-600 dark:text-slate-300 text-sm">GitHub Stars</div>
+              <div className="text-slate-600 dark:text-slate-300 text-sm">{t('testimonials.socialProof.githubStars')}</div>
             </div>
             <div className="w-px h-12 bg-slate-300 dark:bg-slate-600" />
             <div className="text-center">
               <div className="text-blue-600 dark:text-blue-400">+++</div>
-              <div className="text-slate-600 dark:text-slate-300 text-sm">Open Source PRs</div>
+              <div className="text-slate-600 dark:text-slate-300 text-sm">{t('testimonials.socialProof.prs')}</div>
             </div>
             <div className="w-px h-12 bg-slate-300 dark:bg-slate-600" />
             <div className="text-center">
               <div className="text-blue-600 dark:text-blue-400">+++</div>
-              <div className="text-slate-600 dark:text-slate-300 text-sm">Projects Delivered</div>
+              <div className="text-slate-600 dark:text-slate-300 text-sm">{t('testimonials.socialProof.projectsDelivered')}</div>
             </div>
           </div>
         </motion.div>

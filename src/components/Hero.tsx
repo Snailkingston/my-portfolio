@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Calendar, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export function Hero() {
+  const { t } = useTranslation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -59,7 +62,7 @@ export function Hero() {
                 className="inline-flex items-center space-x-2 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full"
               >
                 <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-pulse" />
-                <span>Available for new opportunities</span>
+                <span>{t('hero.available')}</span>
               </motion.div>
 
               <motion.h1
@@ -68,7 +71,7 @@ export function Hero() {
                 transition={{ delay: 0.3 }}
                 className="text-slate-900 dark:text-slate-100"
               >
-                Full-Stack Developer & Microsoft Power Platform Specialist
+                {t('hero.title')}
               </motion.h1>
 
               <motion.p
@@ -77,7 +80,7 @@ export function Hero() {
                 transition={{ delay: 0.4 }}
                 className="text-slate-600 dark:text-slate-300 max-w-2xl"
               >
-                I build production web apps, mobile apps, SaaS, Power Apps, and dashboards powered by Azure — fast, secure, and focused on measurable impact. I turn business problems into working solutions that stakeholders actually use.
+                {t('hero.description')}
               </motion.p>
             </div>
 
@@ -90,15 +93,15 @@ export function Hero() {
             >
               <div className="space-y-1">
                 <div className="text-blue-600 dark:text-blue-400">9+</div>
-                <div className="text-slate-600 dark:text-slate-400 text-sm">MVPs Delivered</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm">{t('hero.mvpsDelivered')}</div>
               </div>
               <div className="space-y-1">
                 <div className="text-blue-600 dark:text-blue-400">85%</div>
-                <div className="text-slate-600 dark:text-slate-400 text-sm">Error Reduction</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm">{t('hero.errorReduction')}</div>
               </div>
               <div className="space-y-1">
                 <div className="text-blue-600 dark:text-blue-400">100+</div>
-                <div className="text-slate-600 dark:text-slate-400 text-sm">Users Onboarded</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm">{t('hero.usersOnboarded')}</div>
               </div>
             </motion.div>
 
@@ -113,7 +116,7 @@ export function Hero() {
                 onClick={() => scrollToSection('projects')}
                 className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all group"
               >
-                <span>View Projects</span>
+                <span>{t('hero.viewProjects')}</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button
@@ -121,7 +124,7 @@ export function Hero() {
                 className="flex items-center space-x-2 px-6 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-lg hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
               >
                 <Calendar size={18} />
-                <span>Schedule Call</span>
+                <span>{t('hero.scheduleCall')}</span>
               </button>
             </motion.div>
 
@@ -132,7 +135,7 @@ export function Hero() {
               transition={{ delay: 0.7 }}
               className="flex items-center space-x-4 pt-4"
             >
-              <span className="text-slate-500 dark:text-slate-400 text-sm">Connect:</span>
+              <span className="text-slate-500 dark:text-slate-400 text-sm">{t('hero.connect')}</span>
               <a
                 href="https://github.com/Snailkingston"
                 target="_blank"
@@ -177,7 +180,7 @@ export function Hero() {
                 <div className="p-6 space-y-2 text-sm font-mono">
                   <div className="text-purple-400">import <span className="text-blue-300">{'{ Success }'}</span> from <span className="text-green-300">'@azure/power-platform'</span>;</div>
                   <div className="text-purple-400">import <span className="text-blue-300">{'{ Innovation }'}</span> from <span className="text-green-300">'@react/solutions'</span>;</div>
-                  <div className="mt-4 text-slate-500">// Building scalable solutions</div>
+                  <div className="mt-4 text-slate-500">// {t('hero.codeComment')}</div>
                   <div className="text-yellow-400">const <span className="text-blue-300">developer</span> = {'{'}</div>
                   <div className="pl-4 text-slate-300">name: <span className="text-green-300">'Suffo Nzogang Patrice'</span>,</div>
                   <div className="pl-4 text-slate-300">role: <span className="text-green-300">'Full-Stack Engineer'</span>,</div>
@@ -198,7 +201,7 @@ export function Hero() {
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center text-white text-xs">
                     FS
                   </div>
-                  <span className="text-slate-700 dark:text-slate-200 text-sm">FULL-STACK</span>
+                  <span className="text-slate-700 dark:text-slate-200 text-sm">{t('hero.fullStack')}</span>
                 </div>
               </motion.div>
 
@@ -211,7 +214,7 @@ export function Hero() {
                   <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-xs">
                     PP
                   </div>
-                  <span className="text-slate-700 dark:text-slate-200 text-sm">POWER PLATFORMS</span>
+                  <span className="text-slate-700 dark:text-slate-200 text-sm">{t('hero.powerPlatforms')}</span>
                 </div>
                 
               </motion.div>
