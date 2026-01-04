@@ -304,26 +304,7 @@ export function Blog() {
           </motion.div>
         )}
 
-        {/* Newsletter CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white"
-        >
-          <h3 className="text-white mb-2">{t('blog.newsletter.title')}</h3>
-          <p className="text-blue-100 mb-6">{t('blog.newsletter.description')}</p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder={t('blog.newsletter.placeholder')}
-              className="flex-1 px-4 py-3 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-all">
-              {t('blog.newsletter.subscribe')}
-            </button>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   );

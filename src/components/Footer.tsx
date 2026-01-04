@@ -48,7 +48,7 @@ export function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:patrice_nzogang@outlook.com"
+                href="mailto:suffo.nzogang.patrice1@gmail.com"
                 className="p-2 bg-slate-800 dark:bg-slate-900 hover:bg-slate-700 dark:hover:bg-slate-800 rounded-lg transition-all"
               >
                 <Mail size={20} />
@@ -63,7 +63,7 @@ export function Footer() {
               </a>
 
               <a
-                href="https://instagram.com/snail_kingston/"
+                href="https://instagram.com/patrice_nzogang/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 dark:bg-slate-900 hover:bg-slate-700 dark:hover:bg-slate-800 rounded-lg transition-all"
@@ -71,7 +71,7 @@ export function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://facebook.com/Snailkingston"
+                href="https://facebook.com/snail.kingston"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 dark:bg-slate-900 hover:bg-slate-700 dark:hover:bg-slate-800 rounded-lg transition-all"
@@ -107,7 +107,7 @@ export function Footer() {
               </a>
 
                <a
-                href="https://wa.me/+237697353791?text=Hello, Sir PATRICE NZOGANG %20I'd%20like%20to%20inquire%20about%20your%20services"
+                href="https://wa.me/+237697353791?text=Hello,  %20I'd%20like%20to%20inquire%20about%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 dark:bg-slate-900 hover:bg-slate-700 dark:hover:bg-slate-800 rounded-lg transition-all"
@@ -139,7 +139,7 @@ export function Footer() {
           <div>
             <h4 className="mb-4">{t('footer.contactTitle')}</h4>
             <ul className="space-y-2 text-slate-400 dark:text-slate-500">
-              <li><a href="mailto: patrice_nzogang@outlook.com">PATRICE_NZOGANG@OUTLOOK.COM</a></li>
+              <li><a href="mailto: patrice_nzogang@outlook.com">suffo.nzogang.patrice1@gmail.com</a></li>
               <li><a href="tel:+237697353791">+237-697-353-791</a></li>
               <li>{t('footer.availableRemote')}</li>
               <li>{t('footer.languages')}</li>

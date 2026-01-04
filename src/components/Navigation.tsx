@@ -172,19 +172,12 @@ export function Navigation({ activeSection }: NavigationProps) {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:patrice_nzogang@outlook.com"
+              href="mailto:suffo.nzogang.patrice1@gmail.com"
               className="p-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all"
             >
               <Mail size={20} />
             </a>
-            <a
-              href="/resume.pdf"
-              download
-              className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
-            >
-              <Download size={18} />
-              <span>{t('nav.resume')}</span>
-            </a>
+            
           </div>
 
           {/* Mobile Menu Button */}

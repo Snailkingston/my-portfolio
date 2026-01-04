@@ -66,7 +66,7 @@ export function Contact() {
       icon: Mail,
       labelKey: 'contact.methods.email.label',
       valueKey: 'contact.methods.email.value',
-      link: "mailto:patrice_nzogang@outlook.com",
+      link: "mailto:suffo.nzogang.patrice1@gmail.com",
       color: "blue",
     },
     {
@@ -94,7 +94,7 @@ export function Contact() {
       icon: PhoneIncoming,
       labelKey: 'contact.methods.whatsapp.label',
       valueKey: 'contact.methods.whatsapp.value',
-      link: "https://wa.me/+237697353791?text=Hello, Sir PATRICE NZOGANG %20I'd%20like%20to%20inquire%20about%20your%20services",
+      link: "https://wa.me/+237697353791?text=Hello,  %20I'd%20like%20to%20inquire%20about%20your%20services",
       color: "pink",
     },
     {
@@ -354,7 +354,7 @@ export function Contact() {
 
                   <button
                     type="submit"
-                    onClick={() => (window.location.href = 'mailto:patrice_nzogang@outlook.com')}
+                    onClick={() => (window.location.href = 'mailto:suffo.nzogang.patrice1@gmail.com')}
                     className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all group"
                   >
                     <Send
