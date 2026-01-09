@@ -207,10 +207,12 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
                       </span>
                     ))}
                   </div>
+                  
                 </div>
               </motion.a>
             ))}
           </div>
+          
         </motion.div>
       </div>
     </section>

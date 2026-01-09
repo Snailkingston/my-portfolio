@@ -21,9 +21,11 @@ export function Skills() {
       categoryKey: 'skills.categories.backend',
       color: 'indigo',
       skills: [
-        {name : 'JavaScript', level : 99},
+        
         {name : 'Python', level : 99},
+        
         {name : 'Java', level : 50},
+        {name : 'Next.js', level : 85},
         { name: 'Node.js / Express', level: 90 },
         { name: 'REST APIs', level: 95 },
         { name: 'GraphQL', level: 85 },
