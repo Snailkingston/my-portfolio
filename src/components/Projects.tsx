@@ -20,6 +20,7 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
       color: 'blue',
       image: 'dashboard analytics',
     },
+    
     {
       titleKey: 'projects.featured.staffTime.title',
       subtitleKey: 'projects.featured.staffTime.subtitle',
@@ -47,25 +48,25 @@ export function Projects({ onOpenCaseStudy }: ProjectsProps) {
       titleKey: 'projects.other.expenseTracker.title',
       descriptionKey: 'projects.other.expenseTracker.description',
       tags: ['React', 'Node.js', 'CSV Parser'],
-      link: '#',
+      link: 'https://github.com/Snailkingston/IndividualFinanceApp',
     },
     {
       titleKey: 'projects.other.officeAutomation.title',
       descriptionKey: 'projects.other.officeAutomation.description',
-      tags: ['Office Scripts', 'TypeScript', 'Excel'],
-      link: '#',
+      tags: ['Python', 'Numpy', 'CSV'],
+      link: 'https://github.com/Snailkingston/stat_calculator',
     },
     {
       titleKey: 'projects.other.eventRSVP.title',
       descriptionKey: 'projects.other.eventRSVP.description',
-      tags: ['Azure Functions', 'React', 'Cosmos DB'],
-      link: '#',
+      tags: ['React','Typescript','CSS'],
+      link: 'https://github.com/Snailkingston/Princess_Restaurant',
     },
     {
       titleKey: 'projects.other.cliTool.title',
       descriptionKey: 'projects.other.cliTool.description',
-      tags: ['Node.js', 'CLI', 'Open Source'],
-      link: '#',
+      tags: ['Python', 'CLI'],
+      link: 'https://github.com/Snailkingston/password-sentinel',
     },
   ];
 

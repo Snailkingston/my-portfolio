@@ -8,13 +8,13 @@ export function Skills() {
       categoryKey: 'skills.categories.frontend',
       color: 'blue',
       skills: [
-        {name : 'TypeScript', level: 67},
-        { name: 'React', level: 95 },
+        {name : 'TypeScript', level: 97},
+        { name: 'React', level: 99 },
         { name: 'Bootstrap', level: 90 },
         { name: 'HTML5 / CSS3', level: 95 },
         { name: 'Tailwind CSS', level: 90 },
-        {name : 'motion libraries', level : 50},
-        {name : 'Others', level : 54},
+        {name : 'motion libraries', level : 70},
+        {name : 'Others', level : 60},
       ],
     },
     {
@@ -24,8 +24,8 @@ export function Skills() {
         
         {name : 'Python', level : 99},
         
-        {name : 'Java', level : 50},
-        {name : 'Next.js', level : 85},
+        {name : 'Java Language', level : 60},
+        
         { name: 'Node.js / Express', level: 90 },
         { name: 'REST APIs', level: 95 },
         { name: 'GraphQL', level: 85 },
@@ -51,7 +51,7 @@ export function Skills() {
         { name: ' REDIS', level: 88 },
         {name : 'SQLite', level : 99},
         {name : 'SuperBase', level : 59},
-        {name : 'Firebase', level : 69},
+        {name : 'Firebase', level : 80},
       ],
     },
     {
@@ -167,7 +167,7 @@ export function Skills() {
         >
           <p className="text-slate-600 dark:text-slate-300 mb-4">{t('skills.additionalTools')}</p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Git', 'VS Code', 'Figma', 'Jira', 'OWASP', 'Unit Testing', 'Azure AD', 'Office Scripts', 'VBA'].map((tool, index) => (
+            {['Git', 'AntiGravity','VS Code', 'Figma','Cursor', 'Jira','Slack', 'Numpy', 'Slack', 'Notion', 'Pandas','Draw.io', 'OWASP', 'Unit Testing','ChatGPT','Gemini', 'Azure AD', 'Office Scripts', 'VBA'].map((tool, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all"

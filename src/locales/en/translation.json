@@ -75,11 +75,11 @@
   },
   "projects": {
     "title": "Portfolio",
-    "subtitle": "Featured Projects",
+    "subtitle": "Discover My Most Robust Projects on GitHub",
     "description": "Production-ready applications delivering measurable business impact",
     "caseStudy": "Case Study",
     "viewCaseStudy": "View Full Case Study",
-    "otherProjects": "Other Projects & Open Source",
+    "otherProjects": "GitHub Projects & Open Source",
     "otherProjectsDesc": "Additional work and contributions",
     "featured": {
       "dashboard": {
@@ -107,16 +107,16 @@
         "description": "React + Node mini-app with CSV import/export functionality"
       },
       "officeAutomation": {
-        "title": "Office Automation Script",
-        "description": "Excel automation using Office Scripts for monthly data consolidation"
+        "title": "Statistics Calculator",
+        "description": "A lightweight Python tool to calculate mean, variance, and standard deviation of numeric datasets. "
       },
       "eventRSVP": {
-        "title": "Event RSVP App",
-        "description": "Serverless event management app built in 48-hour hackathon"
+        "title": "Smart Restaurant Food Booking Web Application",
+        "description": "A responsive React-based web application that allows customers to browse restaurant menus and book food online. The system provides an intuitive interface for selecting meals, managing orders, and improving the restaurant’s digital reservation experience."
       },
       "cliTool": {
-        "title": "Open Source CLI Tool",
-        "description": "Command-line utility for developers (250+ stars on GitHub)"
+        "title": "Offline Password Strength Analysis CLI Tool",
+        "description": "An offline Python command-line tool designed to evaluate password strength using entropy calculation, pattern detection, dictionary-based weakness checks, and breach-style hash comparison techniques."
       }
     }
   },

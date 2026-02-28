@@ -75,11 +75,11 @@
   },
   "projects": {
     "title": "Portfolio",
-    "subtitle": "Projets Phares",
+    "subtitle": "Découvrez mes projets les plus solides sur GitHub",
     "description": "Applications prêtes pour la production offrant un impact commercial mesurable",
     "caseStudy": "Étude de Cas",
     "viewCaseStudy": "Voir l'Étude de Cas Complète",
-    "otherProjects": "Autres Projets & Open Source",
+    "otherProjects": "Projets GitHub & Open Source",
     "otherProjectsDesc": "Travaux et contributions supplémentaires",
     "featured": {
       "dashboard": {
@@ -107,17 +107,18 @@
         "description": "Mini-application React + Node avec fonctionnalité d'import/export CSV"
       },
       "officeAutomation": {
-        "title": "Script d'Automatisation Office",
-        "description": "Automatisation Excel utilisant Office Scripts pour la consolidation mensuelle des données"
+        "title": "Calculatrice Statistique",
+        "description": "Un outil Python léger permettant de calculer la moyenne, la variance et l’écart-type d’ensembles de données numériques."
       },
       "eventRSVP": {
-        "title": "Application RSVP d'Événement",
-        "description": "Application de gestion d'événements serverless construite en 48 heures de hackathon"
+        "title": "Application Web intelligente de réservation de nourriture en restaurant",
+        "description": "Une application web réactive développée avec React permettant aux clients de consulter le menu du restaurant et de réserver des repas en ligne. Le système offre une interface simple pour choisir les plats et améliorer l’expérience de commande et de réservation."
       },
       "cliTool": {
-        "title": "Outil CLI Open Source",
-        "description": "Utilitaire en ligne de commande pour développeurs (250+ étoiles sur GitHub)"
+        "title": "Outil CLI hors ligne d’analyse de robustesse des mots de passe",
+        "description": "Un outil Python en ligne de commande permettant d’évaluer la force des mots de passe en utilisant le calcul d’entropie, la détection de motifs, les vérifications basées sur un dictionnaire et des méthodes de détection inspirées des fuites de hachages."
       }
+
     }
   },
   "impact": {
